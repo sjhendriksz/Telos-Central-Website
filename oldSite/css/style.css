@@ -1,0 +1,918 @@
+/* ---- reset ---- */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,a,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,ul,dt,dd,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+
+body{
+	font-family: sans-serif;
+	color: black;
+}
+p {
+	color: black;
+	font-size: 18px;
+}
+a {
+	color: black;
+}
+a:not([href]):not([tabindex]) {
+    /* color: inherit; */
+    text-decoration: none;
+    color: black;
+}
+span {
+	color: black;
+}
+
+/* Smooth Scrolling */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Preloader */
+#loadingMask {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+    /* Retro 
+    background: #E5DFC5;*/
+    /* Dark */
+    background: #0C0A15;
+    /* Soft 
+	background: #413E4C;*/
+	z-index: 10;
+}
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  margin: 6px;
+  border: 6px solid #000;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  /* Retro 
+  border-color: #000 transparent transparent transparent;*/
+  /* Dark */
+  border-color: #FFF transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Nav Bar */
+.topnav {
+	z-index: 3;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	background-color: #F7F5EE;
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+}
+.topnav a {
+	position: relative;
+	border:0;
+	border-right: 1px solid black;
+	border-top: 1px solid black;
+	background-color: rgba(247, 245, 238, 0.1);
+	box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.4);
+	overflow: show;
+	text-decoration: none;
+	padding: 14px 15px;
+	width: 16.66%;
+	float: left;
+	display: block;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 500;
+	color: black;
+}
+.dropdownm {
+  float: left;
+  overflow: hidden;
+  width: 16.66%;
+}
+.dropdownm .dropbtnm {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  border: none;
+  outline: none;
+  padding: 14px 15px;
+  background-color: inherit;
+  font-family: inherit;
+  width: 100%;
+  border:0;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+}
+.dropdownm-content {
+  display: none;
+  position: absolute;
+  background-color: inherit;
+  width: inherit;
+  border-bottom: 1px solid black;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+  z-index: 1;
+}
+.dropdownm-content a {
+  float: none;
+  color: black;
+  width: 100%;
+  padding: 12px 15px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.topnav a:hover, .dropdownm:hover .dropbtnm {
+	text-decoration: none;
+	cursor: pointer;
+	color: white !important;
+	background-color: #666;
+}
+.dropdownm-content a:hover {
+  color: white !important;
+  background-color: #666;
+}
+.dropdownm:hover .dropdownm-content {
+  display: block;
+}
+/* Add an active id to highlight the current page */
+.active {
+    color: white !important;
+    background-color: #666 !important;
+}
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+/* ---- particles.js container ---- */ 
+#particles-js{ 
+	z-index: auto;
+	position:relative;
+	width: 100%; 
+	height: 100vh;
+	/*min-height: 600px;*/
+	background-color: #E5DFC5; 
+	background-image: url(""); 
+	background-repeat: no-repeat; 
+	background-size: cover; 
+	background-position: 50% 50%;
+}
+/* Canvas */
+canvas{
+	width: 100vw;
+	height: 100vh;
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	background-image: url("");
+	background-repeat: no-repeat; 
+	background-size: cover; 
+	background-position: 50% 50%;
+	box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.4);
+}
+/* Cover Text Transition */
+.FadeOut {
+    opacity: 0;
+    transition: opacity 0.25s linear;
+}
+.FadeIn {
+	opacity: 1;
+    transition: opacity 0.5s linear;
+}
+/*Div on the partical cover */
+#CoverText{
+	z-index: 2;
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+	padding: 20px;
+	text-align: center;
+	display: block;
+	box-sizing: border-box;
+	border: 1px solid black;
+}
+#CoverText h1{
+	color: #BC7439;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	font-size: 37px;
+	padding-bottom: 10px;
+}
+#logo {
+	height: 150px;
+	width: 150px;
+	margin: 0 auto;
+	margin-bottom: 15px;
+}
+/*.TCentralLogo{
+
+}*/
+#CoverText p{
+	color: black;
+	padding: 0px;
+	font-size: 20px;
+}
+/* EOSio Central webpage */
+#EOSioCentral{
+	z-index: 2;
+	width: 175px;
+	height: auto;
+	position: absolute;
+	top: 125px;
+	left: 110px;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+	padding: 20px;
+	text-align: center;
+	display: block;
+	box-sizing: border-box;
+	border: 1px solid black;
+	cursor: pointer;
+}
+#EOSioCentral:hover{
+	background-color: #E5DFC5 !important;
+}
+/* Vote appeal box on the partical cover */
+#VoteBox{
+	z-index: 2;
+	width: 175px;
+	height: auto;
+	position: absolute;
+	top: 340px;
+	left: 110px;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+	padding: 20px;
+	text-align: center;
+	display: block;
+	box-sizing: border-box;
+	border: 1px solid black;
+}
+/* Winning post box on the partical cover */
+#WinningPost{
+	z-index: 2;
+	width: 175px;
+	height: auto;
+	position: absolute;
+	top: 125px;
+	left: 110px;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 10px;
+	padding: 20px;
+	text-align: center;
+	display: block;
+	box-sizing: border-box;
+	border: 1px solid black;
+}
+#WinningPost a:hover{
+	color: rgba(0, 180, 255, 1) !important;
+}
+/* Attrack attention */
+.attentionRetro {
+	box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.4);
+    -webkit-animation-name: attentionRetro;
+    -webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: cubic-bezier(0, .1, .3, 0.9);
+	-webkit-animation-delay: 0s;
+	-webkit-animation-direction: alternate;   
+}
+@keyframes attentionRetro{
+  10% {
+    box-shadow: 0px 0px 20px 10px orange;
+  }
+}
+.attentionDark {
+	box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 1);
+    -webkit-animation-name: attentionDark;
+    -webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: cubic-bezier(0, .1, .3, 0.9);
+	-webkit-animation-delay: 0s;
+	-webkit-animation-direction: alternate;   
+}
+@keyframes attentionDark{
+  10% {
+    box-shadow: 0px 0px 20px 10px white;
+  }
+}
+.attentionFemine {
+	box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.4);
+    -webkit-animation-name: attentionFemine;
+    -webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: cubic-bezier(0, .1, .3, 0.9);
+	-webkit-animation-delay: 0s;
+	-webkit-animation-direction: alternate;   
+}
+@keyframes attentionFemine{
+  10% {
+    box-shadow: 0px 0px 20px 10px pink;
+  }
+}
+/* Scroll Down Arrow */
+#ArrowText{
+	z-index: 3;
+	position: absolute;
+	font-size: 35px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	top: 73%;
+	left: 50%;
+	transform: translate(-50%, -45%);
+}
+#Arrow{
+	z-index: 2;
+	width: 50px;
+	height: 50px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    position: relative;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%, -45%);
+	border-radius: 50%;
+	box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.4);
+}
+#item {
+	position: absolute;
+	z-index: 1;
+}
+#item img {
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+.circle {
+	border-radius: 50%;
+	background-color: black;
+	width: 75px;
+	height: 75px;
+	position: absolute;
+	opacity: 0;
+	-webkit-animation-name: scaleIn;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: cubic-bezier(0, .1, .3, 0.9);
+	-webkit-animation-delay: 0s;
+}
+@keyframes scaleIn {
+  0% {
+    transform: scale(.5, .5);
+    opacity: .5;
+  }
+  50% {
+    transform: scale(2.5, 2.5);
+    opacity: 0;
+  }
+}
+
+/* Social media icons */
+.SIcons{
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	margin: 30px 30px 10px 30px;
+	cursor: pointer;
+}
+/* All the links and listed information */
+#HomePage {
+	background-color: #E5DFC5;
+	overflow: hidden;
+	padding-bottom: 80px;
+	padding-top: 15px;
+}
+#HomePage h2{
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	font-size: 30px;
+}
+/* Other pages styling*/
+#AboutPage, #BountyPage, #WinnerPage, #DisclosuresPage{
+	background-color: #E5DFC5;
+	overflow: hidden;
+	padding-bottom: 15px;
+    padding-top: 20px;
+}
+#AboutPage h2, #BountyPage h2, #WinnerPage h2, #DisclosuresPage h2{
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	font-size: 28px;
+}
+#AboutPage p, #AboutPage ol, #AboutPage li, #AboutPage a {
+	color: inherit;
+	font-size: 18px;
+}
+#BountyPage p, #BountyPage a{
+	color: inherit;
+	font-size: 18px;
+}
+#WinnerPage p, #WinnerPage ol, #WinnerPage li, #WinnerPage a{
+	color: inherit;
+	font-size: 18px;
+}
+#DisclosuresPage p, #DisclosuresPage ol, #DisclosuresPage li, #DisclosuresPage a{
+	color: inherit;
+	font-size: 18px;
+}
+#WinnerPage tr:nth-child(even) {
+  background-color: white;
+}
+.Containers {
+	display: table; border-collapse: separate; border-spacing: 30px 0;
+	box-sizing: border-box;
+	float: left;
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+	width: 100%;
+	height: auto;
+	padding: 10px 10px 10px 10px;
+	margin: 10px 0px;
+	border: 1px solid black;
+	-moz-box-shadow: 4px 4px 8px 4px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 4px 4px 8px 4px rgba(0,0,0,0.4);
+	box-shadow: 4px 4px 8px 4px rgba(0,0,0,0.4);
+}
+#cover ul{
+	list-style: circle;
+	color: black;
+	list-style-position: inside;
+	font-size: 20px;
+}
+#cover a{
+	text-decoration: none;
+	color: rgba(0, 0, 0, 1);
+	font-size: 20px;
+}
+#cover a:hover{
+	color: rgba(0, 180, 255, 1);
+	cursor: pointer;
+}
+
+#HomePage ul{
+	list-style: circle;
+	color: white;
+	list-style-position: inside;
+	font-size: 18px;
+}
+#HomePage li{
+	margin: 2px 0;
+}
+#HomePage a, #DisclosuresPage a{
+	text-decoration: none;
+	font-size: 18px;
+}
+/* Hover effect */
+#HomePage a:hover, #DisclosuresPage a:hover{
+	color: rgba(0, 200, 255, 1);
+}
+/*Sub Headings*/
+.SubHeadings {
+	color: white;
+	letter-spacing: 0.5px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black,0 -1px black;
+}
+
+/* Popup Tooltip with information on links */
+/* Popup LEFT and RIGHT*/
+.mobileLink{
+	margin: 0px 10px;
+	width: 75px;
+	height: auto;
+}
+.popupboxright, .popupboxleft, .popupboxbottom{
+	color: black;
+	position: relative;
+	display: inline-block;
+}
+.popupboxright .popupboxrighttext, .popupboxleft .popupboxlefttext{
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0.25s, opacity 0.25s linear;
+	width: 250px;
+	height: auto;
+	background-color: white;
+	box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.4);
+	color: black;
+	font-size: 16px;
+	font-weight: none;
+	text-align: center;
+	border-radius: 6px;
+	padding: 15px;
+	position: absolute;
+	z-index: 1;
+	transform: translate(0%, -47%);
+}
+.popupboxright .popupboxrighttext{
+  left: 110%;
+}
+.popupboxleft .popupboxlefttext{
+  right: 110%;
+}
+.popupboxImg{
+	height: 75px;
+	width: auto;
+	display: block;
+	margin: 0 auto;
+	border-radius: 6px;
+}
+.popupboxImgLink{
+	width: 40px;
+	height: auto;
+	float: left;
+	display: inline-block;
+	margin: 7px
+}
+.popupboxright .popupboxrighttext::after, .popupboxleft .popupboxlefttext::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+}
+.popupboxright .popupboxrighttext::after{
+  border-color: transparent black transparent transparent;
+  right: 100%;
+}
+.popupboxleft .popupboxlefttext::after{
+  border-color: transparent transparent transparent black;
+  left: 100%;
+}
+.popupboxbottom .popupboxbottomtext::after{
+  border-color: transparent transparent transparent black;
+  left: 100%;
+}
+
+.popupboxright:hover .popupboxrighttext, .popupboxright:active .popupboxrighttext, .popupboxleft:hover .popupboxlefttext, .popupboxleft:active .popupboxlefttext{
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* Tooltip Popups Bottom*/
+.popupboxbottom .popupboxbottomtext{
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0.25s, opacity 0.25s linear;
+	width: 250px;
+	height: auto;
+	background-color: white;
+	box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.4);
+	color: black;
+	font-size: 16px;
+	font-weight: none;
+	text-align: center;
+	border-radius: 6px;
+	padding: 15px;
+	position: absolute;
+	z-index: 1;
+}
+.popupboxbottom .popupboxbottomtext{
+  top: 150%;
+  left: 50%;
+  margin-left: -100px;
+}
+.popupboxbottom .popupboxbottomtext::after{
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+.popupboxbottom:hover .popupboxbottomtext, .popupboxbottom:active .popupboxbottomtext{
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* Tooltip close button*/
+/*.closeWindow{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    height: 40px;
+}*/
+
+
+/* highlightRetroH1 */
+.highlightRetroH1 {
+  	color: white;
+  	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    animation-name: highlightRHone;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 6;
+    animation-direction: alternate;
+}
+@keyframes highlightRHone {
+  50% {
+    color: black;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  }
+}
+/* highlightRetroH2 */
+.highlightRetroH2 {
+  	color: black;
+  	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    animation-name: highlightRHtwo;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 4;
+    animation-direction: alternate;
+}
+@keyframes highlightRHtwo {
+  50% {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+}
+/* Highligh Background */
+.HighlighBackground {
+  	background-color: white;
+    animation-name: HighlighBackground;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes HighlighBackground {
+  50% {
+    background-color: lightblue;
+  }
+}
+/* Newly posted text */
+.new {
+	font-size: 13px;
+  	color: white;
+    animation-name: new;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes new {
+  50% {
+    color: black;
+  }
+}
+/* Information next to link */
+.linkInfo{
+    color: #59FFFF;
+    font-size: 13px;
+}
+
+.icons  {
+	width: auto;
+	height: 50px;
+	margin-bottom: 5px;
+}
+.owners{
+	display: block;
+	width: 100%;
+	border-width: 5px;
+  	background-color: rgba(229, 223, 197, 0.8);
+	border: 1px solid black;
+	border-radius: 5%;
+	float: left;
+	padding: 10px 10px 10px 10px;
+	margin: 10px 0px;
+	font-weight: normal;
+}
+.owners li{
+	list-style-position: inside;
+}
+.photos{
+	width: 80%;
+	height: auto;
+	max-width: 200px;
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto;
+}
+.Disclaimer {
+	color: rgba(0, 0, 0, 0.7);
+	font-size: 16px;
+}
+
+.brackets {
+	color: darkblue;
+	font-size: 14px;
+}
+/* Footer */
+footer {
+	background-color: #E5DFC5;
+	border-top: 1px solid black;
+	width: 100%;
+}
+#footer{
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 10px;
+	width: 100%;
+	height: 100%;
+	padding: 5px 5px 20px 5px;
+}
+#footer p{
+	color: black;
+	padding: 10px;
+}
+/* Standard text for BP name */
+.bpName {
+	color: #BC7439;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	text-align: center;
+	font-size: 20px;
+}
+/* Dropdown list for all the BPs */
+.activeDD{
+  background-color: #444;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+}
+.accordion {
+  width: 200px;
+  transition: 0.5s;
+  background-color: #444;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+  margin-bottom: 5px;
+    
+}
+.accordion:hover {
+  background-color: #ddd;
+  color: rgb(50,50,50) !important;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+  cursor: pointer;
+}
+.panel {
+  display: none;
+  overflow: show;
+}
+
+/* Highlight the links that received WPS funding. */
+.blueDot{
+  font-size: 8px;
+  vertical-align: middle;
+}
+
+/* Tooltip links */
+.tooltipLink{
+  text-decoration: underline;
+  font-size:17px;
+}
+
+/* Earnings Chart */
+/* Hide the winnerslink and voteappeal boxes */
+@media screen and (max-width: 940px) {
+	#CoverText{
+		width: 80%;
+	}
+	#VoteBox{
+		visibility:hidden;
+	}
+	#WinningPost{
+		visibility:hidden;
+	}
+    #ArrowText{
+        display: none;
+    }
+	#particles-js{ 
+		min-height: 600px;
+	}
+  }
+/* Move tooltips from left to right. */
+@media screen and (max-width: 991px) {
+	.popupboxleft .popupboxlefttext{
+  		left: 110%;
+	}
+	.popupboxleft .popupboxlefttext::after{
+		border-color: transparent black transparent transparent;
+		left: -4%;
+	}
+}
+/* When the screen is less than 940 pixels wide, hide all links, except for the first one ("Home").
+Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 940px) {
+  .topnav a:not(:first-child), .dropdownm, .dropbtnm {display: none;}
+  .topnav .dropdownm-content {display: none;}
+  .topnav a.icon {
+  	position: absolute;
+  	right: 0;
+    top: 0;
+    float: right;
+    display: block;
+    width: 20%;
+    z-index: 5;
+  }
+  .topnav {
+  	position: absolute;
+  }
+  #CoverText{
+	top: 45%;
+	left: 50%;
+  }
+  #Arrow{
+	top: 85%;
+	left: 50%;
+  }
+}
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon.
+This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 940px) {
+  .topnav.responsive {
+    position: absolute;
+    background-color: rgba(247, 245, 238, 0.4);
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20%;
+    text-align: center;
+    font-weight: bold;
+  }
+  .topnav.responsive a {
+  	display: block;
+    width: 100%;
+    text-align: left;
+    border-top: 1px solid black;
+  }
+  #Home {
+    width: 80%;
+    text-align: left;
+  }
+  .topnav.responsive .dropdownm {
+    float: none;
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+  .topnav.responsive .dropdownm .dropbtnm {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: left;
+    border-top: 1px solid black;
+  }
+  .topnav.responsive .dropdownm-content {
+    position: relative;
+    width: 100%;
+    border-bottom: 0;
+  }
+    #ArrowText{
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,142 @@
+/* General styling */
+body{
+    font-family: sans-serif;
+    overflow: hidden;
+    margin: 0px;
+}
+
+a{
+    color:white;
+}
+a:hover{
+    color: dodgerblue;
+}
+.navicons{
+    margin-right: 10px;
+}
+.links{
+    margin: 0 10px 0 20px;
+}
+ul{
+    list-style-position: inside;
+}
+
+select{
+    color: aliceblue;
+    border-radius: 5px;
+    text-align: center;
+    background: #1C3144;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+
+/*Website Layout*/
+/*Header Styling - Top of the page*/
+header{
+    background: #1C3144;
+    color: rgb(250,250,250);
+    padding: 5px 10px 5px 30px;
+    height: 50px;
+    font-family: "Times New Roman", serif;
+    font-size: 12px;
+}
+
+/*Navigation Menu - Left side of the page*/
+#mainBody{
+    background: rgb(250,250,250);
+    border-top: 1px solid white;
+    width: 100%;
+    display: table;
+    position: relative;
+    height: -o-calc(100vh - 62px); /* opera */
+    height: -webkit-calc(100vh - 62px); /* google, safari */
+    height: -moz-calc(100vh - 62px); /* firefox */
+}
+
+#leftNavBarGrid{
+    min-width: 200px;
+    display: table-cell;
+    position: relative;
+    background: #1C3144;
+    color: rgb(250,250,250);
+    border-right: 1px solid white;
+}
+
+#visuals-menu{
+/*    width: 100%;*/
+}
+
+ul{
+    display: block;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+}
+
+.menu-item {
+    height: auto;
+    width: 100%;
+    list-style-type: none;
+    padding: 10px 8px 10px 5px;
+}
+
+.hover {
+    background: #EEE;
+    color: #100B00;
+    cursor: pointer;
+}
+
+.selected{
+    background: #88A2AA;
+    color: #100B00;
+}
+
+/*Canvas Styling - Center of the page*/
+#canvasGrid{
+    background: #FFF;
+    width: 100%;
+    margin-left: 220px;
+    display: table-cell;
+}
+
+/*Chart Info Styling - Right of the page*/
+#infoGrid, #reports{
+    margin: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: #1C3144;
+    color: white;
+    display: table-cell;
+    width: 100vw;
+    border-top: 1px solid white;
+}
+#reports{
+    border-left: 1px solid white;
+}
+
+/*Footer Styling - Bottom of the page*/
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid white;
+    background: #1C3144;
+    padding: 20px;
+    overflow: auto;
+}
+#footerP{
+    color: white;
+    display: flex;
+    align-items: center;
+}
+img{
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 50px;
+    background: #FFF;
+    width: 100px;
+    height: auto;
+}
+
