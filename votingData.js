@@ -2,12 +2,11 @@
 // https://developers.eos.io/eosio-nodeos/reference#get_producers
 
 // This function will gather data from an external server API endpoint.
-
 // The server is run and operated by myself and I've setup a subdomain name of sslapi.teloscentral.com which is linked to the public IP address of my server.
-
 // The HTTP request is handled by port 8881 and the HTTPS request is handled by port 9991.
-
 // I make use of a NGINX reverse proxy which will redirect HTTP requests to HTTPS, as well as forward all requests comming in port 80 and 443 to port 8881 and 9991 respectively, which is why the port number does not need to be specified in the URL as can be seen in line 26.
+
+// Added files to github
 
 function VotingData(){
     
