@@ -17,7 +17,7 @@ function Bubble(name, rank, votes, maxVotes, canvasWidth, canvasHeight, totalNum
     
     // Map size
     // Voting Data
-    var bubSize = ((Math.sqrt((this.canvasWidth * this.canvasHeight)/this.totalBubbleNumbers))*1.44);
+    var bubSize = ((Math.sqrt((this.canvasWidth * this.canvasHeight)/this.totalBubbleNumbers))*1.3);
     //console.log(bubSize);
     this.size = map(this.votes, 0, this.maxVotes, 20, bubSize);
     this.dir = createVector(0,0);
