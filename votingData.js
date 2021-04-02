@@ -18,6 +18,8 @@ function VotingData(){
 
     var serverInfo;
     var bpOnchainData;
+    var bpJsonUrlList;
+    var bpJsonList;
     var countryCodes;
     var bpJsons = [];
     var bpListPos = 0;
@@ -83,6 +85,12 @@ function VotingData(){
 
                     // Write the data in JSON format to the global variable, bpData.
                     bpOnchainData = JSON.parse(this.responseText);
+                    
+                    // Call function to compile a list of BP url's
+                    bpJsonUrlList = getJsonData(bpOnchainData);
+                    
+                    // Call function to retrieve json files from the bp servers
+                    //bpJsonList = serverCallGetRequest(bpJsonUrlList);
 
                     // Set step 1 to true
                     step1 = true;
@@ -99,11 +107,55 @@ function VotingData(){
                 
                 // load the country codes excel doc
                 countryCodes = loadTable('countryCodes/countryCodes.csv', 'csv', 'header');
-                // console.log(countryCodes);
 
             };
         }
     };
+    
+    
+    // #########################################
+    // Get BP Json Data function.
+    // #########################################
+    function getJsonData(data) {
+        // empty list
+        var jsonUrlList = [];
+        
+        // iterate data
+        for (var i = 0; i < data.rows.length; i++){
+            
+            // only push url if bp is active
+            if(data.rows[i].is_active){
+                
+                // lets just look for the basic bp.json file in the root folder
+                jsonUrl = data.rows[i].url + "/bp.json";
+                jsonUrlList.push(jsonUrl);
+            }
+        }
+        
+        // return the list
+        return(jsonUrlList);
+    }
+    
+    
+    // #########################################
+    // Server call to BP json files.
+    // #########################################
+    function serverCallGetRequest(urlList) {
+        // empty list
+        var dataList = [];
+        
+        // iterate bp url data and make get requests accordingly
+        for(var i = 0; i < urlList.length; i++){
+            // This is a client side get request to different servers.
+            // Problem here is CORS, so look at doing this server side and saving the json files on server.
+            httpGet(urlList[i], "json", false, function(response) {
+                serverInfo = response;
+                dataList.push(serverInfo);
+            });
+        }
+        return(dataList);
+    }
+    
     
     // #########################################
     // Setup function.
