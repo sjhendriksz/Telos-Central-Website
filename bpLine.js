@@ -29,6 +29,19 @@ function bpLine(x, y, w, h, rank, logo, name, location, blocksProduced, votes){
     this.col5 = 10*this.colInt;
     this.col6 = 13*this.colInt;
     
+    // Colours
+    this.lightBackCol = color('#EEEEEE');
+    this.lightForeCol = color('#100B00');
+    this.darkBackCol = color('#100B00');
+    this.darkForeCol = color('#88A2AA');
+    
+    // Current colour selection
+    this.backgroundCol = this.lightBackCol;
+    this.foregroundCol = this.lightForeCol;
+    
+    // Hover colours
+    this.hover = false;
+    
     // setup method
     this.setup = function()
     {
@@ -38,14 +51,32 @@ function bpLine(x, y, w, h, rank, logo, name, location, blocksProduced, votes){
     // draw method
     this.draw = function()
     {
+        push();
+        
+        // set the colour
+        if(this.hover){
+            fill(this.foregroundCol);
+            stroke(this.backgroundCol);
+        }else{
+            fill(this.backgroundCol);
+            stroke(this.foregroundCol);
+        }
+        
         // draw the line
-        fill(50,50,50);
         rect(this.x, this.y, this.w, this.h);
         
         // set the textsize
+        //textStyle(NORMAL);
         textSize(this.txtSize/2.5);
         textAlign(LEFT, CENTER);
-        fill(250,250,250);
+        noStroke();
+        
+        // set the text colour
+        if(this.hover){
+            fill(this.backgroundCol);
+        }else{
+            fill(this.foregroundCol);
+        }
         
         // draw the BP rank
         text(this.rank, this.x+this.col1, this.y+this.h/2);
@@ -64,6 +95,21 @@ function bpLine(x, y, w, h, rank, logo, name, location, blocksProduced, votes){
         
         // draw the BP votes
         text(this.votes, this.x+this.col6, this.y+this.h/2);
+        
+        pop();
+        
+        this.mouseHover();
+    }
+    
+    this.mouseHover = function(){
+        
+        if(mouseX > this.x && mouseX < this.x+this.w && mouseY > this.y && mouseY < this.y+this.h){
+            this.hover = true;
+        }
+        else
+        {
+            this.hover = false;
+        }
     }
     
 }

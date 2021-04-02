@@ -30,6 +30,10 @@ function VotingData(){
     var maxBlockNum = 0;
     var histogramBars = [];
     var radialBars = [];
+    
+    // Colours
+    this.backgroundCol = color('#100B00');
+    this.foregroundCol = color('#88A2AA');
 
     // Name, ID and loaded variables.
     this.name = '<i class="fas fa-chart-pie fa-lg navicons"></i>BP Votes';
@@ -227,6 +231,9 @@ function VotingData(){
                         else if(countryCodes.getColumn("Country")[j] == "United States of America"){
                             location = "United States";
                         }
+                        else if(countryCodes.getColumn("Country")[j] == "United Arab Emirates"){
+                            location = "UAE";
+                        }
                         else if(countryCodes.getColumn("Country")[j].includes("(")){
                             var endChar = countryCodes.getColumn("Country")[j].indexOf("(");
                             location = countryCodes.getColumn("Country")[j].slice(0, endChar);
@@ -401,16 +408,21 @@ function VotingData(){
                 //------------------------------------------------
                 if(controlPanel.icons[0].isSelected){
                     
+                    // Calculate line height
                     var lineHeight = bpRankedList[0].h;
                     bpListQty = floor(height / lineHeight);
                     
+                    push();
                     // Draw the header
                     bpRankedList[0].draw();
+
                     // Draw the rest of the lines
                     for(var i = 1; i < bpListQty; i++){
+                        // Draw the lines
                         bpRankedList[bpListPos+i].y = lineHeight + (lineHeight*(i-1));
                         bpRankedList[bpListPos+i].draw();
                     }
+                    pop();
                     
                 }
                 
@@ -610,6 +622,23 @@ function VotingData(){
     this.mouseClicked = function() {
         // Run the control panel mouse clicked functions
         controlPanel.mouseClicked(bubbles, histogramBars, radialBars);
+        
+        // Light theme
+        if(controlPanel.icons[5].isSelected){
+            for(var i = 0; i < bpRankedList.length; i++){
+                // Set the colours - Light
+                bpRankedList[i].backgroundCol = bpRankedList[i].lightBackCol; // Set the light theme colour
+                bpRankedList[i].foregroundCol = bpRankedList[i].lightForeCol; // Set the light theme colour
+            }
+        }
+        // Dark them
+        else if(controlPanel.icons[6].isSelected){
+            for(var i = 0; i < bpRankedList.length; i++){
+                // Set the colours - Light
+                bpRankedList[i].backgroundCol = bpRankedList[i].darkBackCol; // Set the dark theme colour
+                bpRankedList[i].foregroundCol = bpRankedList[i].darkForeCol; // Set the dark theme colour
+            }
+        }
         
         // If none of the control panel charts have been selected, display the following information.
         /*if(gallery.selectedVisual.id == "BP-Votes" && controlPanel.icons[0].isSelected == false && controlPanel.icons[1].isSelected == false && controlPanel.icons[2].isSelected == false && controlPanel.icons[3].isSelected == false)

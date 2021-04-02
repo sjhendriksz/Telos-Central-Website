@@ -14,8 +14,20 @@ function createIcon(i, x, y, w, h, m)
     this.chartInfo = "";
 
     this.textS = 16;
-    this.backgroundColour = color(50);
-    this.foregroundColour = color(175);
+    this.backgroundColour = color('#100B00');
+    this.foregroundColour = color('#88A2AA');
+    
+    this.setup = function()
+    {
+        // Sets the icon color to show it is selected.
+        if(this.isSelected){
+            this.backgroundColour = color('#88A2AA');
+            this.foregroundColour = color('#100B00');
+        }else{
+            this.backgroundColour = color('#100B00');
+            this.foregroundColour = color('#88A2AA');
+        }
+    }
     
     this.draw = function()
     {

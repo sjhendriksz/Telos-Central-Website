@@ -39,10 +39,16 @@ function SidePanel(x, y, PanelWidth, PanelHeight)
             };
             this.isLoaded = true;
             
+            // Set the BP ranking icon to selected
+            this.icons[0].isSelected = true;
+            
             // Set the dark background button to selected
             //canvasBackgroundColour = color(50);
             this.icons[5].isSelected = true;
-
+            
+            for(var j = 0; j < this.icons.length; j++){
+                this.icons[j].setup();
+            }
         };
     };
     
