@@ -1,0 +1,60 @@
+{
+  "producer_account_name": "teloscentral",
+  "org": {
+    "candidate_name": "Tel🔵s Central",
+    "website": "https://teloscentral.com",
+    "code_of_conduct":"https://teloscentral.com/ownership.html",
+    "ownership_disclosure":"https://teloscentral.com/disclosure.html",
+    "email":"info@teloscentral.com",
+    "branding":{
+      "logo_256":"https://teloscentral.com/images/logos/logo256.png",
+      "logo_1024":"https://teloscentral.com/images/logos/logo1024.png",
+      "logo_svg":"https://teloscentral.com/images/logos/logo1024.svg"
+    },
+    "location": {
+      "name": "Germany",
+      "country": "DE",
+      "latitude": 51.235279,
+      "longitude": 6.775680
+    },
+    "social": {
+      "steemit": "t-central",
+      "twitter": "teloscentral",
+      "youtube": "channel/UCV3EiLLMQ3SgFgnQYmHDuWw",
+      "telegram": "TelosCentral"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Germany",
+        "country": "DE",
+        "latitude": 51.235279,
+        "longitude": 6.775680
+      },
+      "node_type": "producer"
+    },
+    {
+      "location": {
+        "name": "Germany",
+        "country": "DE",
+        "latitude": 51.235279,
+        "longitude": 6.775680
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "sslapi.teloscentral.com:9876"
+    },
+    {
+      "location": {
+        "name": "Germany",
+        "country": "DE",
+        "latitude": 51.235279,
+        "longitude": 6.775680
+      },
+      "node_type": "query",
+      "api_endpoint": "http://sslapi.teloscentral.com",
+      "ssl_endpoint": "https://sslapi.teloscentral.com",
+      "features" : ["chain-api"]
+    }
+  ]
+}

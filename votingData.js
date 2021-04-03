@@ -89,6 +89,7 @@ function VotingData(){
 
                     // Write the data in JSON format to the global variable, bpData.
                     bpOnchainData = JSON.parse(this.responseText);
+                    console.log(bpOnchainData);
                     
                     // Call function to compile a list of BP url's
                     bpJsonUrlList = getJsonData(bpOnchainData);
