@@ -1,0 +1,68 @@
+{
+  "producer_account_name": "telosmiamibp",
+  "org": {
+    "candidate_name": "ZenBlocks.io",
+    "website": "https://zenblocks.io",
+    "code_of_conduct": "https://zenblocks.io#cc",
+    "ownership_disclosure": "https://zenblocks.io#od",
+    "email": "info@zenblocks.io",
+    "github_user": [
+        "marlonwilliams"
+    ],
+    "phone":"tf-registry",
+    "branding": {
+      "logo_256": "https://zenblocks.io/wp-content/uploads/2021/02/logo_256_mia.png",
+      "logo_1024": "https://zenblocks.io/wp-content/uploads/2021/02/logo_1024_mia.png",
+      "logo_svg": "https://zenblocks.io/wp-content/uploads/2021/02/logo_256_mia.svg"
+    },
+    "location": {
+      "name": "Miami",
+      "country": "US",
+      "latitude": 25.761681,
+      "longitude": -80.191788
+    },
+    "social": {
+      "steemit": "eosmiami",
+      "github":"eosmiami",
+      "facebook":"eosmiami",
+      "telegram": "eosmiami",
+      "keybase": "eosmiami",
+      "twitter": "eosmiami"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "San Francisco",
+        "country": "US",
+        "latitude": 37.7749,
+        "longitude": 122.4194
+      },
+      "node_type": "producer"
+    },
+    {
+      "location": {
+        "name": "San Francisco",
+        "country": "US",
+        "latitude": 37.7749,
+        "longitude": 122.4194
+      },
+      "node_type": "query",
+      "api_endpoint": "http://api.eos.miami",
+      "ssl_endpoint": "https://api.eos.miami",
+      "features": [
+            "chain-api"
+        ]
+    },
+    {
+      "location": {
+        "name": "San Francisco",
+        "country": "US",
+        "latitude": 37.7749,
+        "longitude": 122.4194
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "p2p.telos.zenblocks.io:9876"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "producer_account_name": "telosgreenbp",
+  "org": {
+    "candidate_name": "TelosGreen",
+    "website": "https://www.telosgreen.com",
+    "code_of_conduct": "https://www.telosgreen.com/coc.html",
+    "ownership_disclosure": "https://www.telosgreen.com/ownership.html",
+    "email": "contact@telosgreen.com",
+    "github_user": "sukeshtedla",
+    "other_resources": [
+      "https://kryptoskatt.com",
+      "https://unbiased.ml"
+    ], 
+    "branding": {
+      "logo_256": "https://www.telosgreen.com/images/logo_256x256.png",
+      "logo_1024": "https://www.telosgreen.com/images/logo_1024x1024.png",
+      "logo_svg": "https://www.telosgreen.com/images/logo_128x128.svg"
+    },
+    "location": {
+      "name": "Göteborg",
+      "country": "SE",
+      "latitude": 57.728435,
+      "longitude": 11.971045
+    },
+    "social": {
+      "twitter": "greeneosio",
+      "youtube": "channel/UCKWClh6yFuswj0pIoIvaU7g",
+      "github": "greeneosio",
+      "reddit": "greeneosio",
+      "keybase": "greeneosio",
+      "telegram": "TelosGreen"    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Finland",
+        "country": "FI",
+        "latitude": 60.342166,
+        "longitude": 25.029236
+      },
+      "node_type": "producer"
+    },
+    {
+      "location": {
+        "name": "Germany",
+        "country": "DE",
+        "latitude": 52.520008,
+        "longitude": 13.404954
+      },
+      "node_type": "producer"
+    },    
+    {
+      "location": {
+        "name": "Germany",
+        "country": "DE",
+        "latitude": 52.520008,
+        "longitude": 13.404954
+      },
+      "node_type": [
+        "query",
+        "seed"
+      ],
+      "p2p_endpoint": "p2p1.telos.telosgreen.com:9876",
+      "p2p_endpoint": "p2p2.telos.telosgreen.com:9877",
+      "api_endpoint": "http://api.telos.telosgreen.com",
+      "ssl_endpoint": "https://api.telos.telosgreen.com",      
+      "features": [
+        "chain-api",
+        "account-query",
+        "hyperion-v2"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+"producer_account_name": "telosglobal1",
+"org": {
+"candidate_name": "TelosGlobal",
+"website": "https://telosglobal.io",
+"code_of_conduct": "https://telosglobal.io/compliance/",
+"ownership_disclosure": "https://telosglobal.io/ownership/",
+"email": "info@telosglobal.io",
+"branding": {
+"logo_256": "https://telosglobal.io/images/TelosGlobal_globe_indigo_256.png",
+"logo_1024": "https://telosglobal.io/images/TelosGlobal_globe_indigo_1024.png",
+"logo_svg": "https://telosglobal.io/images/telosglobal-indigo.svg"
+},
+"location": {
+"name": "Sacramento,CA",
+"country": "US",
+"latitude": 38.574,
+"longitude": -121.48
+},
+"social": {
+"steemit": "kquainta",
+"twitter": "TelosGlobal",
+"youtube": "",
+"facebook": "",
+"github": "TelosGlobal",
+"reddit": "",
+"keybase": "q_telosglobal",
+"telegram": "kquainta",
+"wechat": ""
+}
+},
+"nodes": [
+{
+"location": {
+"name": "Sacramento,CA",
+"country": "US",
+"latitude": 38.56,
+"longitude": -121.29
+},
+"node_type": "seed",
+"p2p_endpoint": "node1.us-west.telosglobal.io:9876",
+"api_endpoint":"",
+"ssl_endpoint": ""
+},
+{
+"location": {
+"name": "Herndon,VA",
+"country": "US",
+"latitude": 38.97,
+"longitude": -77.44
+},
+"node_type": ["query","seed"],
+"p2p_endpoint": "node1.us-east.telosglobal.io:9876",
+"api_endpoint":"",
+"ssl_endpoint": "https://global.telosglobal.io",
+"features": [
+"chain-api",
+"account-query"
+]
+},
+{
+"location": {
+"name": "Phoenix,AZ",
+"country": "US",
+"latitude": 33.43,
+"longitude": -112
+},
+"node_type": "producer",
+"p2p_endpoint": "",
+"api_endpoint":"",
+"ssl_endpoint": ""}
+]
+}

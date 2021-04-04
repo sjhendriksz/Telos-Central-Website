@@ -41,7 +41,8 @@ function listURLs(data){
     var urlList = [];
     for(var i = 0; i < data.length; i++){
         if(data[i].is_active == true){
-            urlList.push(data[i].url);
+            var bpObj = {"name":data[i].owner, "url":data[i].url}
+            urlList.push(bpObj);
         }
     }
 
