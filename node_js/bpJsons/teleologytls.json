@@ -1,0 +1,77 @@
+{
+  "producer_account_name": "teleologytls",
+  "org": {
+    "candidate_name": "Teleology", 
+    "website": "https://bp.teleology.one", 
+    "code_of_conduct": "https://bp.teleology.one#code-of-conduct",
+    "ownership_disclosure": "https://bp.teleology.one#code-of-conduct?owner=BP.Teleology%20is%20100%%20owned%20by%20Ryan%20Jones",
+    "email": "antispam-blockops@teleology.one", 
+    "phone": "TF Registry", 
+    "branding": {
+      "logo_256": "https://bp.teleology.one/logos/teleology-logo-256.jpg",
+      "logo_1024": "https://bp.teleology.one/logos/teleology-logo-1024.jpg",
+      "logo_svg": "https://bp.teleology.one/logos/teleology-logo-1024.svg"
+    },
+    "location": {
+      "name": "Australia",
+      "country": "AU",
+      "latitude": -27.4658,
+      "longitude": -153.0286
+    },
+    "social": {
+      "twitter": "TeleologyWorld",
+      "medium": "Teleology",
+      "telegram": "Teleology",
+      "keybase": "teleology"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Hong Kong",
+        "country": "HK",
+        "latitude": 22.2798,
+        "longitude": 114.1749
+      },
+      "node_type": "producer"
+    },
+    {
+      "location": {
+        "name": "Hong Kong",
+        "country": "HK",
+        "latitude": 22.2798,
+        "longitude": 114.1749
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "telos.teleology.one:9876"
+    },
+    {
+      "location": {
+        "name": "Hong Kong",
+        "country": "HK",
+        "latitude": 22.2798,
+        "longitude": 114.1749
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "hyperion.teleology.one:9876"
+    },
+    {
+      "location": {
+        "name": "Hong Kong",
+        "country": "HK",
+        "latitude": 22.2798,
+        "longitude": 114.1749
+      },
+      "node_type": "query",
+      "api_endpoint": "http://telos.teleology.one",
+      "ssl_endpoint": "https://telos.teleology.one",
+      "features" : [
+	"chain-api",
+	"account-query",
+	"history-v1",
+	"hyperion-v2"
+      ]
+    }
+  ]
+}
+

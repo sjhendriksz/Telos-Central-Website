@@ -11,31 +11,37 @@ var jsonData;
 var tempUrls = fs.readFileSync('bpUrls/bpUrls.json');
 var bpUrls = JSON.parse(tempUrls);
 
-// console.log(bpUrls);
-// getChain("teloscentral.com");
-
+// itterate over all the url's and get the chains and then bp.json files
 for (var i =0; i < bpUrls.length; i++){
-  try{
-    modUrl = bpUrls[i].url.slice(8);
-    bpName =  bpUrls[i].name
-    getChain(modUrl, bpName);
+  modUrl = bpUrls[i].url.slice(8);
+  bpName =  bpUrls[i].name;
+  try {
+    getChain(modUrl, bpName, "/chains.json");
+  } 
+  catch (error) {
+    console.log(error);
   }
-  catch(err) {
-    console.log("Loop error: " + i)
-    //console.log(err);
+  finally {
+    getChain(modUrl, bpName, "/bp.json");
   }
 }
+
+// catch uncaught exceptions
+process.on('uncaughtException', err => {
+  console.error('There was an uncaught error', err);
+  process.exit(1); //mandatory (as per the Node.js docs)
+})
 
 
 // ************************************
 // Get the chains.json info
 // ************************************
-function getChain(bpUrl, bpName){
+function getChain(bpUrl, bpName, serverPath){
   // if there is a chains.json file, get the info from there
   const options = {
     hostname: bpUrl,
     port: 443,
-    path: "/chains.json",
+    path: serverPath,
     method: 'GET'
   }
 
@@ -43,20 +49,19 @@ function getChain(bpUrl, bpName){
     console.log(`statusCode: ${res.statusCode}`)
   
     res.on('data', d => {
-      jsonData = JSON.parse(d);
-      var chainPath = jsonData.chains["4667b205c6838ef70ff7988f6e8257e8be0e1284a2f59699054a018f743b1d11"];
-      console.log("getChain: " + bpUrl + chainPath);
-      getJson(bpUrl, chainPath, bpName);
-
+      try {
+        jsonData = JSON.parse(d);
+        var chainPath = jsonData.chains["4667b205c6838ef70ff7988f6e8257e8be0e1284a2f59699054a018f743b1d11"];
+        console.log("getChain: " + bpUrl + chainPath);
+        getJson(bpUrl, chainPath, bpName);
+      } catch (error) {
+        console.log(error);
+      }
     })
   })
   req.on('error', error => {
-    console.log("getChain error: " + bpUrl)
-    //console.error(error);
-
-    // chain unsuccessful, just try the normal bp.json
-    //getJson(bpUrl, "/bp.json");
-
+    console.log("getChain error: " + bpUrl);
+    console.error(error);;
   })
   req.end()
 }
@@ -67,7 +72,6 @@ function getChain(bpUrl, bpName){
 // ************************************
 function getJson(bpUrl, pathName, bpName){
 
-  // if there is a chains.json file, get the info from there
   const options = {
     hostname: bpUrl,
     port: 443,

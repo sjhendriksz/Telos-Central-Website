@@ -1,0 +1,67 @@
+{
+  "producer_account_name": "blocksideita",
+  "org": {
+    "candidate_name": "Blockside",
+    "website": "https://telos.blockside.io",
+    "code_of_conduct": "https://telos.blockside.io/coc.html",
+    "ownership_disclosure": "https://telos.blockside.io/disclosure.html",
+    "email": "telos@blockside.io",
+    "phone":"TF_Registry",
+    "github_user":"gitggooss",
+    "branding": {
+      "logo_256": "https://telos.blockside.io/images/logo_256x256.png",
+      "logo_1024": "https://telos.blockside.io/images/logo_1024x1024.png",
+      "logo_svg": "https://telos.blockside.io/images/logo_128x128.svg"
+    },
+    "location": {
+      "name": "Italy",
+      "country": "IT",
+      "latitude": 11.121292,
+      "longitude": 46.0673452
+    },
+    "social": {
+      "steemit": "blocksideita",
+      "twitter": "blockside2",
+      "youtube": "",
+      "facebook": "",
+      "github": "blockside",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "blockside",
+      "wechat": "blockside"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Gravelines",
+        "country": "FR",
+        "latitude": 51.0165733,
+        "longitude": 2.1550872
+      },
+      "node_type": "producer"
+    },
+    {
+      "location": {
+        "name": "Gravelines",
+        "country": "FR",
+        "latitude": 51.0165733,
+        "longitude": 2.1550872
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "p2ptelos.blockside.io:19877"
+    },
+    {
+      "location": {
+        "name": "Gravelines",
+        "country": "FR",
+        "latitude": 51.0165733,
+        "longitude": 2.1550872
+      },
+      "node_type": "query",
+      "api_endpoint": "http://apitelos.blockside.io",
+      "ssl_endpoint": "https://apitelos.blockside.io",
+      "features": ["chain-api","account-query"]
+    }
+  ]
+}

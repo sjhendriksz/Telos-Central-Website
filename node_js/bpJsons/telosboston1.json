@@ -1,0 +1,62 @@
+{
+  "producer_account_name": "telosboston1",
+  "org": {
+    "candidate_name": "Telos Boston",
+    "website": "https://telosboston.com",
+    "code_of_conduct": "https://telosboston.com#code",
+    "ownership_disclosure": "https://telosboston.com#ownership",
+    "email":"smith731@gmail.com",
+    "branding":{
+      "logo_256":"https://telosboston.com/wp-content/uploads/2019/09/tb_logo_256.png",
+      "logo_1024":"https://telosboston.com/wp-content/uploads/2019/09/tb_logo_1024.png",
+      "logo_svg":"https://telosboston.com/tb_logo.svg"
+    },
+    "social": {
+      "telegram":"telosboston",
+      "facebook":"telosfoundation.io",
+      "twitter": "hellotelos",
+      "github":"telos-foundation"
+    },
+    "location":{
+      "latitude": 42.4072,
+      "longitude": -71.3824,
+      "name":"Massachusetts",
+      "country":"US"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Massachusetts",
+        "country": "US",
+        "latitude": 42.4072,
+        "longitude": -71.3824
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "api.telosboston.com:9876"
+    },
+    {
+      "location": {
+        "name": "Massachusetts",
+        "country": "US",
+        "latitude": 42.4072,
+        "longitude": -71.3824
+      },
+      "node_type": "producer"
+    },
+    {
+      "location": {
+        "name": "Massachusetts",
+        "country": "US",
+        "latitude": 42.4072,
+        "longitude": -71.3824
+      },
+      "node_type": "query",
+      "api_endpoint": "http://api.telosboston.com",
+      "ssl_endpoint": "https://api.telosboston.com",
+      "features": [
+        "chain-api"
+        ]
+    }
+  ]
+}

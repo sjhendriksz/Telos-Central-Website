@@ -1,0 +1,79 @@
+{
+  "producer_account_name": "eosiodetroit",
+  "org": {
+    "candidate_name": "EOS Detroit",
+    "website": "https://eosdetroit.io",
+    "ownership_disclosure": "https://eosdetroit.io/block-producer/transparency",
+    "code_of_conduct": "https://steemit.com/eos/@eos.detroit/eos-detroit-membership-guidelines",
+    "email": "ask@eosdetroit.io",
+    "github_user": ["robrigo", "wakeupjohnny"],
+    "chain_resources":"",
+    "other_resources": [],
+    "phone": "tf-registry",
+    "branding": {
+      "logo_256": "https://eosdetroit.io/images/telos-D-logo.png",
+      "logo_1024": "https://eosdetroit.io/images/telos-D-logo_1024.png",
+      "logo_svg": "https://eosdetroit.io/images/eos-detroit.svg"
+    },
+    "location": {
+      "name": "Detroit",
+      "country": "US",
+      "latitude": 42.3314,
+      "longitude": -83.0458
+    },
+    "social": {
+      "steemit": "eos.detroit",
+      "twitter": "eosiodetroit",
+      "youtube": "eosdetroit",
+      "facebook": "eosiodetroit",
+      "github": "eosdetroit",
+      "reddit": "eosdetroit",
+      "keybase": "robrigo",
+      "telegram": "eos_detroit",
+      "wechat": "robrigo_eosdetroit"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "telos-api13-ibm-fra3",
+        "country": "DE",
+        "latitude": 50.110924,
+        "longitude": 8.682127
+      },
+      "node_type": "query",
+      "p2p_endpoint": "",
+      "api_endpoint": "http://api.telos.eosdetroit.io",
+      "ssl_endpoint": "https://api.telos.eosdetroit.io",
+      "features":[
+        "chain-api",
+        "account-query",
+        "history-v1"
+      ]
+    },
+    {
+      "location": {
+        "name": "telos-seed2-ibm-fra3",
+        "country": "DE",
+        "latitude": 50.110924,
+        "longitude": 8.682127
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "p2p.telos.eosdetroit.io:1337",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "telos-eosdetroit-bp1-det1",
+        "country": "US",
+        "latitude": 42.3314,
+        "longitude": -83.0458
+      },
+      "node_type": "producer",
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}

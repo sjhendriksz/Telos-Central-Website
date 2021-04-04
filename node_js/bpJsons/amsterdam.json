@@ -1,0 +1,67 @@
+{
+	"producer_account_name": "amsterdam",
+	"org": {
+		"candidate_name":"EOSAmsterdam",
+		"website": "https://eosamsterdam.net",
+		"code_of_conduct": "https://steemit.com/eos/@eosamsterdam/eos-amsterdam-code-of-conduct",
+		"ownership_disclosure": "https://eosamsterdam.net#partners",
+		"email": "contact@eosamsterdam.net",
+		"branding": {
+			"logo_256": "https://eosamsterdam.net/branding/logo_256.png",
+			"logo_1024": "https://eosamsterdam.net/branding/logo_1024.png",
+			"logo_svg": "https://eosamsterdam.net/branding/logo_svg.svg"
+		},
+		"location": {
+			"name": "Amsterdam",
+			"country": "NL",
+			"latitude": 52.3548445,
+			"longitude": 4.9600367
+		},
+		"social": {
+			"steemit": "eosamsterdam",
+			"twitter": "eosamsterdam",
+			"facebook": "EOS-Amsterdam-1586544661442120",
+			"github": "eosamsterdam",
+			"reddit": "eosamsterdam",
+			"telegram": "EOS_Amsterdam",
+			"wechat": "eosamsterdam"
+		}
+	},
+	"nodes": [
+                {
+                        "location": {
+                                "name": "Amsterdam",
+                                "country": "NL",
+                                "latitude": 52.354925,
+                                "longitude": 4.96096
+                        },
+                        "node_type": "producer"
+                },
+		{
+			"location": {
+				"name": "Amsterdam",
+				"country": "NL",
+				"latitude": 52.354925,
+				"longitude": 4.96096
+			},
+			"node_type": "query",
+			        "features": [
+                                       "chain-api",
+                                       "account-query"
+                        ],
+			"api_endpoint": "http://telos.eu.eosamsterdam.net",
+			"ssl_endpoint": "https://telos.eu.eosamsterdam.net"
+		},
+		{
+                        "location": {
+                                "name": "Amsterdam",
+                                "country": "NL",
+                                "latitude": 52.354925,
+                                "longitude": 4.96096
+                        },
+                        "node_type": "seed",
+                        "p2p_endpoint": "telos.eu.eosamsterdam.net:9120"
+                }
+
+	]
+}

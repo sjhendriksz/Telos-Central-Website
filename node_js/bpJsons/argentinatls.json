@@ -1,0 +1,63 @@
+{
+	"producer_account_name": "argentinatls",
+	"org": {
+		"candidate_name": "EOSArgentina",
+		"website": "https://www.eosargentina.io",
+		"code_of_conduct": "https://www.eosargentina.io/disclosures.html#codeofconduct",
+        "ownership_disclosure":"https://www.eosargentina.io/disclosures.html#disclosures",
+		"email": "info@eosargentina.io",
+		"branding": {
+			"logo_256": "https://www.eosargentina.io/assets/img/eosar_logo_256.png",
+			"logo_1024": "https://www.eosargentina.io/assets/img/eosar_logo_1024.png",
+			"logo_svg": "https://www.eosargentina.io/assets/img/eosar_logo.svg"
+		},
+		"location": {
+			"name": "BuenosAires",
+			"country": "AR",
+			"latitude": -34.61315,
+			"longitude": -58.37723
+		},
+		"social": {
+			"steemit": "eosargentina",
+			"twitter": "eosargentina",
+			"facebook": "EOSArgentina",
+			"github": "eosargentina",
+			"reddit": "eosargentina",
+			"keybase": "eosargentina",
+			"telegram": "eosarg",
+			"wechat": "wxid_3r2tf35z69fk22"
+		}
+	},
+ "nodes": [
+    {
+      "location": {
+        "name": "Germany",
+        "country": "DE",
+        "latitude": 52.5200,
+        "longitude": 13.4050
+      },
+      "node_type": "producer"
+    },
+    {
+      "location": {
+        "name": "Argentina",
+        "country": "AR",
+        "latitude":-34.596178,
+        "longitude": -58.373279
+      },
+      "node_type": "full",
+      "api_endpoint": "http://telos.eosargentina.io",
+      "ssl_endpoint": "https://telos.eosargentina.io"
+    },
+    {
+      "location": {
+        "name": "Argentina",
+        "country": "AR",
+        "latitude": -34.596178,
+        "longitude": -58.373279 
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "p2p.telos.eosargentina.io:9876"
+    }
+  ]
+}

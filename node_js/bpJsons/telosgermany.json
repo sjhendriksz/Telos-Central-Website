@@ -1,0 +1,84 @@
+{
+  "producer_account_name": "telosgermany",
+  "org": {
+    "candidate_name": "TelosGermany",
+    "website": "https://telosgermany.io",
+    "code_of_conduct": "https://telosgermany.io/code_of_conduct.html",
+    "ownership_disclosure": "https://telosgermany.io/index.html#ownership-disclosure",
+    "email": "contact@telosgermany.io",
+    "phone": "TF Registry",
+    "branding": {
+      "logo_256": "https://telosgermany.io/assets/telosgermany-logo-256.png",
+      "logo_1024": "https://telosgermany.io/assets/telosgermany-logo-1024.png",
+      "logo_svg": "https://telosgermany.io/assets/telosgermany-logo.svg"
+    },
+    "location": {
+      "name": "Frankfurt am Main",
+      "country": "DE",
+      "latitude": 51.1657,
+      "longitude": 10.4515
+    },
+    "social": {
+      "steemit": "",
+      "twitter": "TelosGermany",
+      "youtube": "channel/UCLw8Ree0Ov4CjmxLqY3jOFw",
+      "facebook": "",
+      "github": "TelosGermany",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "TelosGermany",
+      "wechat": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Frankfurt",
+        "country": "DE",
+        "latitude": 51.1657,
+        "longitude": 10.4515
+      },
+      "node_type": "query",
+      "api_endpoint": "http://api.telosgermany.io",
+      "ssl_endpoint": "https://api.telosgermany.io",
+      "features": [
+        "chain-api"
+      ]
+    },
+    {
+      "location": {
+        "name": "Frankfurt",
+        "country": "DE",
+        "latitude": 51.1657,
+        "longitude": 10.4515
+      },
+      "node_type": "query",
+      "api_endpoint": "http://hyperion.telosgermany.io",
+      "ssl_endpoint": "https://hyperion.telosgermany.io",
+      "features": [
+        "chain-api",
+        "history-v1",
+        "hyperion-v2"
+      ]
+    },    
+    {
+      "location": {
+        "name": "Frankfurt",
+        "country": "DE",
+        "latitude": 51.1657,
+        "longitude": 10.4515
+      },
+      "node_type":"seed",
+      "p2p_endpoint": "p2p.telosgermany.io:9876"
+    },
+    {
+      "location": {
+        "name": "Frankfurt",
+        "country": "DE",
+        "latitude": 51.1657,
+        "longitude": 10.4515
+      },
+      "node_type":"producer"
+    }
+  ]  
+}

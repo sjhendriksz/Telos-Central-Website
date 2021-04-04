@@ -1,0 +1,67 @@
+{
+    "producer_account_name": "telosarabia1",
+    
+    "org": {
+        "candidate_name": "EOSArabia",
+        "website": "https://telosarabia.net",
+        "code_of_conduct" : "https://eosarabia.net/4qsy1qlIm/code-of-conduct",
+        "ownership_disclosure" : "https://eosarabia.net/YPpT2v_N3/ownership",
+        "email": "info@telosarabia.net",
+        "phone": "+966507338865",
+        "github_user": "EOS-Arabia",
+        "branding": {
+            "logo_256": "https://uae.telosarabia.net/Gold_Logo-256.png",
+            "logo_1024": "https://uae.telosarabia.net/Gold_Logo-1024.png",
+            "logo_svg": "https://uae.telosarabia.net/Gold_Logo.svg"
+        },
+       "location": {
+			"name": "UAE,Dubai",
+            "country": "AE",
+            "latitude": 25.0929383,
+            "longitude": 55.1901911
+        },
+        "social": {
+            "steemit": "telosarabia",
+            "twitter": "Telosarabia",
+            "youtube": "channel/UCku8FY8kPuJ7asKw5LKTDIg",
+            "facebook": "",
+            "reddit": "",
+            "keybase": "",
+            "telegram": "Telos_Arabia",
+            "wechat": ""
+        }
+    },
+  "nodes": [
+    {
+      "location": {
+        "name": "Munich",
+        "country": "DE",
+         "latitude": 11.5976072,
+         "longitude": 48.1040971
+      },
+      "node_type": "query",
+      "features": ["chain-api", "account-query"],
+      "api_endpoint": "http://api.telosarabia.net",
+      "ssl_endpoint": "https://api.telosarabia.net"
+    },
+    {
+      "location": {
+        "name": "Munich",
+        "country": "DE",
+         "latitude": 11.5976072,
+         "longitude": 48.1040971
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "p2p.telosarabia.net:9876"
+    },
+    {
+      "location": {
+        "name": "Munich",
+        "country": "DE",
+         "latitude": 11.5976072,
+         "longitude": 48.1040971
+      },
+      "node_type": "producer"
+    }
+  ]   
+}

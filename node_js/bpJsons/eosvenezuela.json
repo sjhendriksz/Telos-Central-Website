@@ -1,0 +1,62 @@
+{
+  "producer_account_name": "eosvenezuela",
+  "org": {
+    "candidate_name": "EOS Venezuela",
+    "website": "https://eosvenezuela.io",
+    "code_of_conduct": "https://steemit.com/eos/@eosvenezuela/code-of-conduct-eos-venezuela",
+    "ownership_disclosure": "https://steemit.com/eos/@eosvenezuela/6w6rbg-eos-venezuela-ownership",
+    "email": "info@eosvenezuela.io",
+    "phone":"54-9-11-31922946",
+    "branding": {
+      "logo_256": "https://eosvenezuela.io/vnzlalogo_256.jpg",
+      "logo_1024": "https://eosvenezuela.io/vnzlalogo_1024.jpg",
+      "logo_svg": "https://eosvenezuela.io/vnzlasvg.svg"
+    },
+        "location": {
+        "name": "Venezuela",
+        "country": "VE",
+        "latitude": 5.1633,
+        "longitude": -69.4147
+    },
+    "social": {
+        "steemit": "eosvenezuela",
+        "twitter": "eosvenezuela",
+        "github": "eosvenezuela",
+        "reddit": "eosvenezuela",
+        "keybase": "alberto176",
+        "telegram": "eosvenezuela"
+    }
+  },
+  "nodes": [
+    {
+    "location": {
+          "name": "Venezuela",
+          "country": "VE",
+          "latitude": 5.1633,
+          "longitude": -69.4147
+      },
+      "node_type": "producer"
+    },
+    {
+         "location": {
+          "name": "Venezuela",
+          "country": "VE",
+          "latitude": 5.1633,
+          "longitude": -69.4147
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "telos.eosvenezuela.io:9871"
+    },
+    {
+         "location": {
+          "name": "Venezuela",
+          "country": "VE",
+          "latitude": 5.1633,
+          "longitude": -69.4147
+      },
+      "node_type": "full",
+      "api_endpoint": "http://telos.eosvenezuela.io",
+      "ssl_endpoint": "https://telos.eosvenezuela.io"
+    }
+  ]
+}

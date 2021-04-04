@@ -1,0 +1,71 @@
+{
+  "producer_account_name": "blindblocart",
+  "org": {
+    "candidate_name": "BlindBlocArt",
+    "website": "https://blindblocart.io",
+    "code_of_conduct": "https://www.reddit.com/user/blindblocart/comments/9xha9n/code_of_conduct/",
+    "ownership_disclosure": "https://www.reddit.com/user/blindblocart/comments/9ulv7m/ownership_details_for_blindblocart/",
+    "email": "jerry@blindblocart.io",
+    "branding": {
+      "logo_256": "https://api.blindblocart.io/logos/BBA_logo_256.jpg",
+      "logo_1024": "https://api.blindblocart.io/logos/BBA_logo_large.jpg",
+      "logo_svg": "https://api.blindblocart.io/logos/BBA_logo_large.svg"
+    },
+    "location": {
+      "name": "GeorgeTown",
+      "country": "KY",
+      "latitude": 19.3133  ,
+      "longitude": -80.58002 
+    },
+    "social": {
+      "steemit": "",
+      "twitter": "blindblocart",
+      "youtube": "",
+      "facebook": "",
+      "github": "jerryhuff",
+      "reddit": "blindblocart",
+      "telegram": "BlindBlocArt",
+      "wechat": "" 
+    }
+  },
+  "nodes": [
+     {
+      "location": {
+        "name": "Singapore",
+        "country": "SG",
+        "latitude": 1.3521,
+        "longitude": 103.8198
+      },
+      "node_type": "producer",
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+     },
+     {
+      "location":{ 
+        "name": "Sydney",
+        "country": "AU",
+        "latitude": 33.8688,
+        "longitude": 151.2093
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "api.blindblocart.io:9876"
+     },
+     {
+      "location": {
+        "name": "Sydney",
+        "country": "AU",
+        "latitude": 33.8688,
+        "longitude": 151.2093
+      },
+      "node_type": "query",
+      "api_endpoint": "http://api.blindblocart.io",
+      "ssl_endpoint": "https://api.blindblocart.io",
+      "features": [
+	      "chain-api"
+      ]
+        
+    }
+  ]
+}
+

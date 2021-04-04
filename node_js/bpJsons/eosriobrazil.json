@@ -1,0 +1,66 @@
+{
+  "producer_account_name": "eosriobrazil",
+  "org": {
+    "candidate_name": "EOS Rio",
+    "website": "https://eosrio.io",
+    "code_of_conduct":"https://eosrio.io/code-of-conduct/",
+    "ownership_disclosure":"https://web.eosrio.io/ownership-disclosure/",
+    "email":"contact@eosrio.io",
+    "branding":{
+      "logo_256":"https://eosrio.io/wp-content/uploads/2018/06/logo-eosrio-square-bgblack-1.jpg",
+      "logo_1024":"https://eosrio.io/logo-eosrio1024.png",
+      "logo_svg":"https://eosrio.io/logo-eosrio-black-square-01.svg"
+    },
+    "location": {
+      "name": "Rio de Janeiro",
+      "country": "BR",
+      "latitude": -22.9068,
+      "longitude": -43.1729
+    },
+    "social": {
+      "steemit": "eosrio",
+      "twitter": "eosriobrazil",
+      "facebook": "EOSRioBP",
+      "youtube": "channel/UC5aslySB2QP_v8dyMMBcTxw",
+      "github":"eosrio",
+      "reddit": "eosrio",
+      "keybase": "igorls",
+      "telegram": "eosrio",
+      "wechat":"igorls_eosrio",
+      "medium":"eosriobrazil"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Rio de Janeiro",
+        "country": "BR",
+        "latitude": -23.9068,
+        "longitude": -46.1729
+      },
+      "node_type": "full",
+      "api_endpoint": "http://telos.eosrio.io",
+      "ssl_endpoint": "https://telos.eosrio.io"
+    },
+    {
+      "location": {
+        "name": "Rio de Janeiro",
+        "country": "BR",
+        "latitude": -22.9096,
+        "longitude": -43.1729
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "telos.eosrio.io:8092"
+    },
+    {
+      "location": {
+        "name": "Rio de Janeiro",
+        "country": "BR",
+        "latitude": -22.9096,
+        "longitude": -43.1729
+      },
+      "node_type": "producer"
+    }
+  ]
+}
+

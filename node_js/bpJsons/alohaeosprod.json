@@ -1,0 +1,59 @@
+{
+  "producer_account_name":"alohaeosprod",
+  "org": {
+    "candidate_name":"Aloha EOS",
+    "website":"https://www.alohaeos.com",
+    "code_of_conduct":"https://www.alohaeos.com/conduct",
+    "ownership_disclosure":"https://www.alohaeos.com/ownership",
+    "email":"info@alohaeos.com",
+    "github_user": "n8d",
+    "other_resources": [
+      "https://www.alohaeos.com/vote/tlosmain",
+      "https://www.alohaeos.com/vote/proxy/tlosmain",
+      "https://www.alohaeos.com/tools/reliability#networkId=5&timeframeId=8&sort=rank&sortDir=asc",
+      "https://t.me/Telos_Mainnet_Aloha_Tracker"
+    ],
+    "branding":{
+      "logo_256":"https://www.alohaeos.com/images/bpinfo/aeos-circle-256.png",
+      "logo_1024":"https://www.alohaeos.com/images/bpinfo/aeos-circle-1024.png",
+      "logo_svg":"https://www.alohaeos.com/images/bpinfo/aeos-circle.svg"
+    },
+    "location": {
+      "name": "United States",
+      "country": "US",
+      "latitude": 21.315603,
+      "longitude": -157.858093
+    },
+    "social": {
+      "steemit": "alohaeos",
+      "twitter": "eosaloha",
+      "reddit": "alohaeos",
+      "keybase": "alohaeos",
+      "telegram": "AlohaEOS"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Hawaii",
+        "country": "US",
+        "latitude": 21.315603,
+        "longitude": -157.858093
+      },
+      "node_type": "producer"
+    },
+    {
+      "location": {
+        "name": "Oregon",
+        "country": "US",
+        "latitude": 44.1234064,
+        "longitude": -122.8311203
+      },
+      "node_type": ["query", "seed"],
+      "api_endpoint": "http://api.telos.alohaeos.com",
+      "ssl_endpoint": "https://api.telos.alohaeos.com",
+      "p2p_endpoint": "peer.telos.alohaeos.com:9876",
+      "features": ["chain-api","account-query"]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "producer_account_name": "bigironbptex",
+  "org": {
+    "candidate_name": "Bigiron",
+    "website": "https://Bigiron.io",
+    "code_of_conduct": "https://Bigiron.io/code-of-conduct-and-ownership/",
+    "ownership_disclosure": "https://Bigiron.io/code-of-conduct-and-ownership/",
+    "email": "info@Bigiron.io",
+    "branding": {
+      "logo_256": "https://api.bigiron.io/logos/Big-iron-logo-256.jpg",
+      "logo_1024": "https://api.bigiron.io/logos/Big-Iron-logo-1024.jpg",
+      "logo_svg": "https://api.bigiron.io/logos/Big-iron-logo-256.svg"
+    },
+    "location": {
+      "name": "California",
+      "country": "US",
+      "latitude": 36.972323,
+      "longitude": -122.024017
+    },
+    "social": {
+      "steemit": "",
+      "youtube": "",
+      "facebook": "",
+      "twitter": "bigiron",
+      "telegram": "bigiron"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Fremont",
+        "country": "US",
+        "latitude": 37.5482697,
+        "longitude": -121.9885719
+      },
+      "node_type": "producer"
+    },
+    {
+      "location": {
+        "name": "Dallas",
+        "country": "US",
+        "latitude": 30.807,
+        "longitude": -98.335556
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "api.bigiron.io:29876"
+    },
+    {
+      "location": {
+        "name": "SanJose",
+        "country": "US",
+        "latitude": 30.807,
+        "longitude": -98.335556
+      },
+      "node_type": "query",
+      "api_endpoint": "http://api.bigiron.io",
+      "ssl_endpoint": "https://api.bigiron.io",
+      "feature": [
+	      "chain-api"
+      ]
+    }
+  ]
+}
+

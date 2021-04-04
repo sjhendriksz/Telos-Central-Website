@@ -1,0 +1,64 @@
+{
+  "producer_account_name": "tlscafeblock",
+  "org": {
+    "candidate_name": "EOS Cafe Block",
+    "website": "https://eoscafeblock.com",
+    "code_of_conduct":"https://steemit.com/blockproducer/@eoscafe/eos-cafe-calgary-code-of-conduct-roadmap-finances-and-voting",
+    "email":"syed@eoscafeblock.com",
+    "ownership_disclosure":"https://github.com/eoscafe/ownership-disclosure",
+    "branding":{
+      "logo_256":"https://eoscafeblock.com/cafe_logo_256.png",
+      "logo_1024":"https://eoscafeblock.com/cafe_logo_1024.png",
+      "logo_svg":""
+    },
+    "location": {
+      "name": "Canada",
+      "country": "CA",
+      "latitude": 51.0486,
+      "longitude": -114.0708
+    },
+    "social": {
+      "steemit": "eoscafeblock",
+      "twitter": "eoscafeblock",
+      "youtube": "eoscafeblock",
+      "reddit": "eoscafeblock",
+      "telegram": "eoscafeblock",
+      "github":"eoscafe",
+      "keybase": "eoscalgary",
+      "wechat":"wxid_st7mrsz0e1c522",
+      "facebook": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Canada",
+        "country": "CA",
+        "latitude": 51.0486,
+        "longitude": -114.0708
+      },
+      "api_endpoint": "http://telos.eoscafeblock.com",
+      "ssl_endpoint": "https://telos.eoscafeblock.com",
+      "node_type": "full"
+    },
+    {
+      "location": {
+        "name": "Canada",
+        "country": "CA",
+        "latitude": 51.0486,
+        "longitude": -114.0708
+      },
+      "p2p_endpoint": "telosp2p.eoscafeblock.com:9120",
+      "node_type": "seed"
+    },
+    {
+      "location": {
+        "name": "Calgary",
+        "country": "CA",
+        "latitude": 51.0486,
+        "longitude": -114.0708
+      },
+      "node_type": "producer"
+    }
+  ]
+}

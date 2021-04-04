@@ -1,0 +1,80 @@
+{
+  "producer_account_name": "cryptolions1",
+  "org": {
+    "candidate_name": "CryptoLions🦁",
+    "website": "https://cryptolions.io",
+    "code_of_conduct": "https://cryptolions.io/code-of-conduct/",
+    "ownership_disclosure": "https://cryptolions.io/ownership-disclosure/",
+    "email": "roar@cryptolions.io",
+    "github_user": "ansigroup",
+    "chain_resources": "https://backup.cryptolions.io/TelosMainNet/",
+    "other_resources": [
+      "https://eosnetworkmonitor.io",
+      "https://telos.tools.simpleassets.io",
+      "https://telos.certs.cryptolions.io",
+      "https://telos.kolobok.io",
+      "https://telos.simplemarket.io",
+      "https://simpleassets.io",
+      "https://telos.explorer.simpleassets.io",
+      "https://redemptionbank.io",
+      "https://pupload.io"
+    ],
+    "branding":{
+      "logo_256": "https://imgs.cryptolions.io/logo_256.png",
+      "logo_1024": "https://imgs.cryptolions.io/logo_1024.png",
+      "logo_svg": "https://imgs.cryptolions.io/logo.svg"
+    },
+    "location": {
+      "name": "Ukraine",
+      "country": "UA",
+      "latitude": 49.8397,
+      "longitude": 24.0297
+    },
+    "social": {
+      "keybase": "cryptolions",
+      "telegram": "CryptoLions_io",
+      "twitter": "EOS_CryptoLions",
+      "github": "CryptoLions",
+      "youtube": "channel/UCB7F-KO0mmZ1yVBCq0_1gtA"      
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Germany-Finland",
+        "country": "DE",
+        "latitude": 51.2993,
+        "longitude": 9.491
+      },
+      "node_type": "producer"
+    },
+    {
+      "location": {
+        "name": "Germany-Finland",
+        "country": "FI",
+        "latitude": 60.3419912,
+        "longitude": 25.0292574
+      },
+      "node_type": "producer"
+      },
+    {
+      "location": {
+        "name": "Germany-Finland",
+        "country": "DE",
+        "latitude": 51.2993,
+        "longitude": 51.2993
+      },
+      "node_type": [
+      "query",
+      "seed"
+      ],
+      "p2p_endpoint": "telos.cryptolions.io:9871",
+      "api_endpoint": "http://telos.cryptolions.io",
+      "ssl_endpoint": "https://telos.cryptolions.io",
+      "features": [
+        "chain-api",
+        "account-query"
+      ]
+    }
+  ]
+}

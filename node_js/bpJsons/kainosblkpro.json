@@ -1,0 +1,61 @@
+{
+  "producer_account_name": "kainosblkpro",
+  "org": {
+    "candidate_name": "KainosBP",
+    "website": "https://kainosbp.com",
+    "code_of_conduct": "https://kainosbp.com/commitment-to-telos",
+    "ownership_disclosure": "https://kainosbp.com/about-us",
+    "email": "info@kainosbp.com",
+    "phone": "+12543077728",
+    "branding": {
+      "logo_256": "https://kainosbp.com/kainosbpA_256.png",
+      "logo_1024": "https://kainosbp.com/kainosbpA_1024.png",
+      "logo_svg": "https://kainosbp.com/kainossvg.svg"
+    },
+    "location": {
+      "name": "Texas",
+      "country": "US",
+      "latitude": 31.559814,
+      "longitude": -97.141800
+    },
+    "social": {
+      "github": "KainosBP",
+      "telegram": "hartparr",
+      "facebook": "kainosbp",
+      "twitter": "kainosbp"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Texas",
+        "country": "US",
+        "latitude": 31.559814,
+        "longitude": -97.141800
+      },
+      "node_type": "producer"
+    },
+    {
+      "location": {
+        "name": "Texas",
+        "country": "US",
+        "latitude": 31.559814,
+        "longitude": -97.141800
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "p2p.kainosbp.com:9876"
+    },
+    {
+      "location": {
+        "name": "Texas",
+        "country": "US",
+        "latitude": 32.773651,
+        "longitude": -96.783442
+      },
+      "node_type": "query",
+      "features" : ["chain-api", "account-query"],
+      "api_endpoint": "http://api.kainosbp.com",
+      "ssl_endpoint": "https://api.kainosbp.com"
+    }
+  ]
+}
