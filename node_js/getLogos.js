@@ -44,7 +44,7 @@ compileLogoUrlList();
 // ************************************
 // Download the logos
 // ************************************
-function getLogo(urlPara, fileDir){
+function getLogo(name, urlPara, fileDir){
 
     // Save the logo URL into a variable
     var logoURL = urlPara;
@@ -53,10 +53,10 @@ function getLogo(urlPara, fileDir){
       // Save the file name for use with the local path
       var adr = logoURL;
       var q = url.parse(adr, true);
-      var fileName = q.pathname.substring(q.pathname.lastIndexOf('/')+1);
+      var fileExt = q.pathname.substring(q.pathname.lastIndexOf('.'));
 
       // Save file to directory and use file name
-      var locPath = fileDir + fileName
+      var locPath = fileDir + name + fileExt;
       //saveImageToDisk(logoURL, locPath);
 
       download(logoURL, locPath, function (state) {
@@ -70,4 +70,6 @@ function getLogo(urlPara, fileDir){
             });
 }
 
-getLogo(logoUrlList[0].logo, "/bpLogos");
+for(var i = 0; i < logoUrlList.length; i++){
+    getLogo(logoUrlList[i].name, logoUrlList[i].logo, "bpLogos/");
+}
