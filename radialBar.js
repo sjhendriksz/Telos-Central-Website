@@ -171,17 +171,18 @@ function RadialBar(barRadius, barWidth, barSpacing, name, rank, vote, maxVotes, 
     // #################################################################
     this.mouseWheel = function()
     {
-
+        console.log("mouseWheel");
         if(this.name == this.name){
-            if(event.delta == 100){
+            if(event.delta >= 100){
                 this.zoom -= 0.1
-            }else if(event.delta == -100){
+            }else if(event.delta <= -100){
                 this.zoom += 0.1
             }
             this.zoom = constrain(this.zoom, 0.5, 4);
 
         }
         
+        return false;
     }
     
     var vectorMouse;
