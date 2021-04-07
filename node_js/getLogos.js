@@ -96,6 +96,6 @@ function getLogo(name, urlPara, fileDir){
             });
 }
 
-/* for(var i = 0; i < logoUrlList.length; i++){
-    getLogo(logoUrlList[i].name, logoUrlList[i].logo, "bpLogos/");
-} */
+for(var i = 1; i < logoUrlList.length; i++){
+    getLogo(logoUrlList[i].owner, logoUrlList[i].logo, "bpLogos/");
+}
