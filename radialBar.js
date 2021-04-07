@@ -171,7 +171,7 @@ function RadialBar(barRadius, barWidth, barSpacing, name, rank, vote, maxVotes, 
     // #################################################################
     this.mouseWheel = function()
     {
-        console.log("mouseWheel");
+        console.log("radial bar chart mouseWheel");
         if(this.name == this.name){
             if(event.delta >= 100){
                 this.zoom -= 0.1
@@ -179,7 +179,6 @@ function RadialBar(barRadius, barWidth, barSpacing, name, rank, vote, maxVotes, 
                 this.zoom += 0.1
             }
             this.zoom = constrain(this.zoom, 0.5, 4);
-
         }
         
         return false;

@@ -41,25 +41,23 @@ function createIcon(i, x, y, w, h, m)
         // ##############################
         if(this.index == 0){
             // Display the chart info on the webpage
-            /*if(this.isSelected && gallery.selectedVisual.id == "BP-Votes")
+            if(this.isSelected && gallery.selectedVisual.id == "BP-Votes")
             {
-                this.chartHeading = "The Scattered Bubble Chart.";
-                this.chartInfo = "This is the Scattered Bubble Chart where bubbles move away from each other in a scattered pattern. \
+                this.chartHeading = "The BP Standings.";
+                this.chartInfo = "Here you can see information related to the current Telos BPs. \
                 <br><br> \
-                The size of the bubble correlates directly to the number of votes each block producer has on the Telos blockchain. The Telos blockchain is a third-generation blockchain that utilizes a delegated proof of stake consensus algorithm where the different delegates (also known as Block Producers) are voted for by the token holders. \
+                The top 21 BPs are the predomently producing blocks. One of the top 21 BPs are cycled out of production while one of the standby block producers are cycled into production. This is a way to ensure standby BP readiness. \
                 <br><br> \
                 The information is displayed in real-time and is requested via an API endpoint from our server, that is synchronized to the Telos blockchain network. \
                 <br><br> \
-                More information will be displayed when the mouse is moved over a bubble, like the Block Producer name, the number of actual votes, as well as the rank number in the Block Producer standings. \
-                <br><br> \
-                The colour of each bubble is generated at random, so sometimes, some of the colours might be difficult to see against a white or black background, so the option to change the canvas background between black and white is also available.";
+                The table includes information such as the current rankings, the BP name, location and amount of votes.";
                 
                 var htmlP = select('#chartInfo');
                 htmlP.html(this.chartInfo);
                 
                 var htmlH3 = select('#chartInfoHeading');
                 htmlH3.html(this.chartHeading);
-            }*/
+            }
             
             // Tooltip description of the icon
             this.descriptionLine1 = "A ranked list of BP standings";
@@ -96,7 +94,7 @@ function createIcon(i, x, y, w, h, m)
         // ##############################
         if(this.index == 1){
             // Display the chart info on the webpage
-            /*if(this.isSelected && gallery.selectedVisual.id == "BP-Votes")
+            if(this.isSelected && gallery.selectedVisual.id == "BP-Votes")
             {
                 this.chartHeading = "The Scattered Bubble Chart.";
                 this.chartInfo = "This is the Scattered Bubble Chart where bubbles move away from each other in a scattered pattern. \
@@ -114,7 +112,7 @@ function createIcon(i, x, y, w, h, m)
                 
                 var htmlH3 = select('#chartInfoHeading');
                 htmlH3.html(this.chartHeading);
-            }*/
+            }
             
             // Tooltip description of the icon
             this.descriptionLine1 = "A scattered bubble chart representation";
@@ -150,7 +148,7 @@ function createIcon(i, x, y, w, h, m)
         else if(this.index == 2)
         {
             // Display the chart info on the webpage
-           /* if(this.isSelected && gallery.selectedVisual.id == "BP-Votes"){
+            if(this.isSelected && gallery.selectedVisual.id == "BP-Votes"){
                 this.chartHeading = "The Ordered Bubble Chart.";
                 this.chartInfo = "This is the Ordered Bubble Chart where bubbles are ordered from big to small. \
                 <br><br>The position of the first bubble is calculated and then the position of each of the following bubbles are calculated based on the size and position of the previous bubble. \
@@ -168,7 +166,7 @@ function createIcon(i, x, y, w, h, m)
                 
                 var htmlH3 = select('#chartInfoHeading');
                 htmlH3.html(this.chartHeading);
-            }*/
+            }
             
             // Tooltip description of the icon
             this.descriptionLine1 = "An ordered bubble chart representation";
@@ -206,7 +204,7 @@ function createIcon(i, x, y, w, h, m)
         else if(this.index == 3)
         {
             // Display the chart info on the webpage
-            /*if(this.isSelected && gallery.selectedVisual.id == "BP-Votes"){
+            if(this.isSelected && gallery.selectedVisual.id == "BP-Votes"){
                 this.chartHeading = "The Histogram Chart.";
                 this.chartInfo = "This is the Histogram Bar Chart where the bars are ordered from big to small. \
                 <br><br> \
@@ -227,7 +225,7 @@ function createIcon(i, x, y, w, h, m)
                 
                 var htmlH3 = select('#chartInfoHeading');
                 htmlH3.html(this.chartHeading);
-            }*/
+            }
             
             // Tooltip description of the icon
             this.descriptionLine1 = "A histogram representation of the"
@@ -262,7 +260,7 @@ function createIcon(i, x, y, w, h, m)
         else if(this.index == 4)
         {
             // Display the chart info on the webpage
-            /*if(this.isSelected && gallery.selectedVisual.id == "BP-Votes"){
+            if(this.isSelected && gallery.selectedVisual.id == "BP-Votes"){
                 this.chartHeading = "Radial Bar Chart.";
                 this.chartInfo = "This is the Radial Bar Chart is a data representation where the bars are drawn in a circular pattern. This chart has zoom and scroll functionality, so when the mouse is over the canvas the user can click and drag the chart, as well as zoom in and out using the mousewheel. \
                 <br><br> \
@@ -285,7 +283,7 @@ function createIcon(i, x, y, w, h, m)
                 
                 var htmlH3 = select('#chartInfoHeading');
                 htmlH3.html(this.chartHeading);
-            }*/
+            }
             
             // Tooltip description of the icon
             this.descriptionLine1 = "A radial bar chart representation of"

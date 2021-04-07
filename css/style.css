@@ -1,7 +1,7 @@
 /* General styling */
 body{
     font-family: sans-serif;
-    overflow: hidden;
+    overflow: auto;
     margin: 0px;
 }
 
@@ -50,9 +50,9 @@ header{
     width: 100%;
     display: table;
     position: relative;
-    height: -o-calc(100vh - 62px); /* opera */
-    height: -webkit-calc(100vh - 62px); /* google, safari */
-    height: -moz-calc(100vh - 62px); /* firefox */
+    height: -o-calc(90vh - 62px); /* opera */
+    height: -webkit-calc(90vh - 62px); /* google, safari */
+    height: -moz-calc(90vh - 62px); /* firefox */
 }
 
 #leftNavBarGrid{

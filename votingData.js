@@ -693,7 +693,7 @@ function VotingData(){
         }
         
         // If none of the control panel charts have been selected, display the following information.
-        /*if(gallery.selectedVisual.id == "BP-Votes" && controlPanel.icons[0].isSelected == false && controlPanel.icons[1].isSelected == false && controlPanel.icons[2].isSelected == false && controlPanel.icons[3].isSelected == false)
+        if(gallery.selectedVisual.id == "BP-Votes" && controlPanel.icons[0].isSelected == false && controlPanel.icons[1].isSelected == false && controlPanel.icons[2].isSelected == false && controlPanel.icons[3].isSelected == false)
         {
               var chartHeading = "Select a chart type from the selection on the right.";
               var chartInfo = "More information related to the selected chart will be displayed here.";
@@ -703,7 +703,7 @@ function VotingData(){
 
               var htmlH3 = select('#chartInfoHeading');
               htmlH3.html(chartHeading);
-        }*/
+        }
         
     };
     
@@ -733,7 +733,7 @@ function VotingData(){
     // #########################################
     this.mouseWheel = function(){
         
-        // only run this funciton if the BP list is selected
+        // only run this function if the BP list is selected
         if(controlPanel.icons[0].isSelected)
         {
             if(event.delta >= 100 && bpListPos < bpRankedList.length - bpListQty){
@@ -741,22 +741,18 @@ function VotingData(){
             }else if(event.delta <= -100 && bpListPos >= 1){
                 bpListPos -= 1;
             }
-            
-            // console.log(event.delta);
-            //return false;
-            
         }
         
         // only run this function if the radial bar graph is selected
-        if(controlPanel.icons[3].isSelected)
+        if(controlPanel.icons[4].isSelected)
         {
             // call the mouseWheel function an all objects
             for(var i = 0; i < radialBars.length; i++){
                 radialBars[i].mouseWheel();
             }
-
-            return false;
         }
+        
+        return false;
     }
     
     
