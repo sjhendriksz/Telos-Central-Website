@@ -1,11 +1,13 @@
 // #########################################
 // BP Line constructor function.
 // #########################################
-function bpLine(x, y, w, h, rank, logo, name, location, blocksProduced, votes){
+function bpLine(x, y, w, h, rank, logoName, name, location, blocksProduced, votes){
     
     // Function arguments
     this.rank = rank;
-    this.logo = logo;
+    this.logoName = logoName;
+    this.logo;
+    this.imgLoaded = false;
     this.name = name;
     this.location = location;
     this.blocks = blocksProduced;
@@ -25,8 +27,8 @@ function bpLine(x, y, w, h, rank, logo, name, location, blocksProduced, votes){
     this.col1 = 10;
     this.col2 = 2*this.colInt;
     this.col3 = 4*this.colInt;
-    this.col4 = 7*this.colInt;
-    this.col5 = 10*this.colInt;
+    this.col4 = 8*this.colInt;
+    this.col5 = 12*this.colInt;
     this.col6 = 13*this.colInt;
     
     // Colours
@@ -45,7 +47,9 @@ function bpLine(x, y, w, h, rank, logo, name, location, blocksProduced, votes){
     // setup method
     this.setup = function()
     {
-        
+        var tmpVotes = str(this.votes);
+        tmpVotes = tmpVotes.slice(-9,-6) + "," + tmpVotes.slice(-6,-3) + "," + tmpVotes.slice(-3);
+        this.votes = tmpVotes;
     }
     
     // draw method
@@ -82,8 +86,21 @@ function bpLine(x, y, w, h, rank, logo, name, location, blocksProduced, votes){
         text(this.rank, this.x+this.col1, this.y+this.h/2);
         
         // draw the BP logo
-        text(this.logo, this.x+this.col2, this.y+this.h/2);
-        
+        if(this.logoName == "LOGO"){
+            text(this.logoName, this.x+this.col2, this.y+this.h/2);
+        }
+        else
+        {
+            if(this.imgLoaded){
+                imageMode(CENTER);
+                image(this.logo, this.x + this.col2 + this.h*4/10, this.y+this.h/2, this.h*9/10, this.h*9/10);
+            }
+            else // When no logo is available
+            {
+                ellipse(this.x + this.col2 + this.h*4/10, this.y+this.h/2, this.h*9/10);
+            }
+        }
+
         // draw the BP name
         text(this.name, this.x+this.col3, this.y+this.h/2);
         
@@ -91,15 +108,17 @@ function bpLine(x, y, w, h, rank, logo, name, location, blocksProduced, votes){
         text(this.location, this.x+this.col4, this.y+this.h/2);
         
         // draw the BP blocks produced
-        text(this.blocks, this.x+this.col5, this.y+this.h/2);
+        // text(this.blocks, this.x+this.col5, this.y+this.h/2);
         
         // draw the BP votes
-        text(this.votes, this.x+this.col6, this.y+this.h/2);
+        text(this.votes, this.x+this.col5, this.y+this.h/2);
         
         pop();
         
         this.mouseHover();
     }
+    
+    
     
     this.mouseHover = function(){
         

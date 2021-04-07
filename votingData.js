@@ -18,6 +18,7 @@ function VotingData(){
 
     var serverInfo;
     var bpOnchainData;
+    var bpLogoPathList;
     var bpJsonUrlList;
     var bpJsonList;
     var countryCodes;
@@ -77,6 +78,10 @@ function VotingData(){
                 var bpJson = response;
                 //console.log(bpJson);
             });
+            
+            // load the bp logo paths from local file
+            bpLogoPathList = loadJSON("node_js/bpLogos/logoList.json");
+            console.log(bpLogoPathList);
 
             if(!step1){
                 // The data of a maximum of 150 block producers will be gathered.
@@ -183,6 +188,11 @@ function VotingData(){
             compileBubblesArray();
             compileHistogram();
             compileRadial();
+            
+            // run the setup functions for the bp lines
+            for(var i = 1; i < bpRankedList.length; i++){
+                bpRankedList[i].setup();
+            }
 
             //run the setup function for the control panel
             controlPanel.setup();
@@ -211,6 +221,9 @@ function VotingData(){
         // push the header into the array
         bpRankedList.push(new bpLine(xPos, yPos, wdt, hgt, "RANK", "LOGO", "NAME", "LOCATION", "BLOCKS", "VOTES"));
         
+        // test - delete
+        console.log(bpLogoPathList);
+        
         // push the active bp data into the bpRankedList array for display
         for(var i = 0; i < bpOnchainData.rows.length; i++)
         {
@@ -219,9 +232,21 @@ function VotingData(){
                 
                 var rank = i+1;
                 var name = bpOnchainData.rows[i].owner;
-                var logo = "...";
                 
-                //var location = "null";
+                var logoName;
+                
+                // get the logo name based on the owner name. Also update the name from the bp.json info
+                for(var k = 1; k < bpLogoPathList[0].length; k++){
+                    if(name == bpLogoPathList[k].owner){
+                        name = bpLogoPathList[k].name;
+                        logoName = bpLogoPathList[k].owner + bpLogoPathList[k].logoExt;
+                        break;
+                    }
+                    else{
+                        logoName = "";
+                    }
+                }
+                
                 var location = bpOnchainData.rows[i].location;
                 
                 for(var j = 0; j < countryCodes.getColumn("uncode").length; j++){
@@ -248,13 +273,39 @@ function VotingData(){
                 var blocksProduced = bpOnchainData.rows[i].lifetime_produced_blocks
                 var vote = round(bpOnchainData.rows[i].total_votes/10000);
                 
-                bpRankedList.push(new bpLine(xPos, yPos, wdt, hgt, rank, logo, name, location, blocksProduced, vote));
+                // bpLine(x, y, w, h, rank, logoName, name, location, blocksProduced, votes){
+                bpRankedList.push(new bpLine(xPos, yPos, wdt, hgt, rank, logoName, name, location, blocksProduced, vote));
             };
         };
         
         console.log(bpRankedList);
         
+        // load the images
+        for(var j = 1; j < bpRankedList.length; j++){
+            if(bpRankedList[j].logoName != ""){
+                bpRankedList[j].logo = loadLocalPic(bpRankedList[j].logoName, bpRankedList[j]);
+            }
+        }
+        
     };
+    
+    // #########################################
+    // Load the image.
+    // #########################################
+    function loadLocalPic(fileName, element){
+        var logo_path = "node_js/bpLogos/" + fileName;
+        
+        return loadImage(logo_path,
+                         function(){
+                                    element.imgLoaded = true;
+                                    totalLoad = totalLoad+1;
+                                    if(totalLoad == dataLimit){loadingComplete = true;}
+                                   },
+                         function(){
+                                    console.log("#" + element.rank + "  Error: " + logo_path)
+                                    }
+                        );
+    }
     
     // #########################################
     // Compile bubble array function.
