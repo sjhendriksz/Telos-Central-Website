@@ -92,12 +92,20 @@ function bpLine(x, y, w, h, rank, logoName, name, location, blocksProduced, vote
         else
         {
             if(this.imgLoaded){
+                push();
+                fill('#FFF');
+                rectMode(CENTER);
+                rect(this.x + this.col2 + this.h*4/10, this.y+this.h/2, this.h*1, this.h*9/10, this.h*1.5);
                 imageMode(CENTER);
-                image(this.logo, this.x + this.col2 + this.h*4/10, this.y+this.h/2, this.h*9/10, this.h*9/10);
+                image(this.logo, this.x + this.col2 + this.h*4/10, this.y+this.h/2, this.h*7/10, this.h*7/10);
+                pop();
             }
             else // When no logo is available
             {
-                ellipse(this.x + this.col2 + this.h*4/10, this.y+this.h/2, this.h*9/10);
+                push();
+                fill(23,67,179);
+                ellipse(this.x + this.col2 + this.h*4/10, this.y+this.h/2, this.h*4/10);
+                pop();
             }
         }
 

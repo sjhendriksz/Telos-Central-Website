@@ -3,6 +3,7 @@
 // ####################################
 function Welcome(){
     // Name for the visualisation to appear in the menu bar.
+    // this.name = '<i class="gg-home-alt"></i>Home';
     this.name = '<i class="fas fa-home fa-lg navicons"></i>Home';
 
     // Each visualisation must have a unique ID with no special
@@ -186,21 +187,21 @@ function Welcome(){
     // ####################################
     this.mouseClicked = function(){
         // Display the following information when the page start up and the home button is selected.
-        /*if(gallery.selectedVisual.id == "Welcome-Animation")
+        if(gallery.selectedVisual.id == "Welcome-Animation")
         {
               var chartHeading = "Welcome to the EOSio Central portal.";
               var chartInfo = "We're striving to create a central portal of information on all things related to EOSio based blockchains. \
               <br><br> \
               Stating that things in the blockchain space move at lightning speed is a gross understatement and keeping up with all the latest developments is quite difficult and could be overwhelming for those truly interested in being up to date. We aim to make it a little easier by gathering and compiling all that information in a central portal that is easy to use and filled with useful information and links to everything in the ecosystem. \
               <br><br> \
-              This is not an easy task though, so if you know notice anything missing, feel free to contact us and we'll make the necessary updates.";
+              This is not an easy task though, so if you notice anything missing, feel free to contact us and we'll make the necessary updates.";
 
               var htmlP = select('#chartInfo');
               htmlP.html(chartInfo);
 
               var htmlH3 = select('#chartInfoHeading');
               htmlH3.html(chartHeading);
-        }*/
+        }
     }
 
 }

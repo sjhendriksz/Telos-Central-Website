@@ -44,10 +44,10 @@ function processData(){
       var fileName = q.pathname.substring(q.pathname.lastIndexOf('/')+1);
 
       // Save file to directory and use file name - Off server path
-      //var locPath = './pictures/' + fileName
+      var locPath = 'pictures/' + fileName
       
       // Save file to directory and use file name - On server path
-      var locPath = '/var/www/Telos/node_js/pictures/' + fileName
+      //var locPath = '/var/www/Telos/node_js/pictures/' + fileName
      
       //saveImageToDisk(logoURL, locPath);
 

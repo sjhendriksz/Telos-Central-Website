@@ -3,13 +3,14 @@
 // ####################################
 var nomicsDataFile = null;
 var coinGeckoDataFile = null;
-var totalLoad = 0;
+var totalMarketLoad = 0;
 var loadingComplete = false;
 var dataLimit = 100;
 
 function MarketData(){
     
     this.name = '<i class="fas fa-poll fa-lg navicons"></i>Market Data';
+    // this.name = '<i class="gg-dollar"></i>Market Data';
     this.id = 'Market Data';
     
     this.x = 20;
@@ -133,30 +134,31 @@ function MarketData(){
             loopCount ++;
             
         }
+        
+        // temp code
+        // console.log(this.dataPoints);
 
         // Load the picture for every data point
         for(var i = 0; i < this.dataPoints.length; i++){
-            if(this.dataPoints[i].logo == null)
+            if(this.dataPoints[i].logo == null && this.dataPoints[i].imgLoaded == false)
             {
                 if(this.dataPoints[i].logoLink != ""){
                     this.dataPoints[i].logo = loadPictures(this.dataPoints[i].logoLink, this.dataPoints[i]);
+                    totalMarketLoad = totalMarketLoad+1;
                 }
                 else
                 {
-                    var locPath = 'node_js/pictures/';
-                    var picNamePNG = locPath + this.dataPoints[i].id + ".png";
-                    var picNameJPG = locPath + this.dataPoints[i].id + ".jpg";
-                    console.log(i + ": Logo not available. " + this.dataPoints[i].name + "  " + this.dataPoints[i].id);
-                    this.dataPoints[i].logo = loadLocalPic(picNamePNG, this.dataPoints[i]);
+                    totalMarketLoad = totalMarketLoad+1;
                 }
+                if(totalMarketLoad == dataLimit){loadingComplete = true;}
             }
-            
         }
+            
         
         // Load the image if the data point does not have a logo URL.
         function loadLocalPic(logo_path, element){
             
-            return loadImage(logo_path,
+            var loadedImg = loadImage(logo_path,
                              function(){
                                         if(element.logo.width > element.logo.height){
                                             element.logo.resize(element.h*5/10,0);
@@ -165,13 +167,16 @@ function MarketData(){
                                             element.logo.resize(0,element.h*5/10);
                                         };
                                         element.imgLoaded = true;
-                                        totalLoad = totalLoad+1;
-                                        if(totalLoad == dataLimit){loadingComplete = true;}
+                                        totalMarketLoad = totalMarketLoad+1;
+                                        if(totalMarketLoad == dataLimit){loadingComplete = true;}
                                        },
                              function(){
-                                        console.log("#" + element.rank + "  Error: " + logo_path)
+                                        console.log("#" + element.rank + "  Error: " + logo_path);
                                         }
                             );
+            
+            return loadedImg;
+            
         }
         
         
@@ -195,8 +200,6 @@ function MarketData(){
                                 element.logo.resize(0,element.h*5/10);
                             };
                             element.imgLoaded = true;
-                            totalLoad = totalLoad+1;
-                            if(totalLoad == dataLimit){loadingComplete = true;}
                            },
                  function(){
                             fileName = fileName.toLowerCase();
@@ -205,7 +208,6 @@ function MarketData(){
                             console.log("#" + element.rank + "  Error: " + locPath)
                             }
                 );
-            
         }
         
         console.log("Data processed function finished.")
@@ -262,8 +264,8 @@ function MarketData(){
     // Draw method
     this.draw = function(){
         
-        if(totalLoad != dataLimit){
-            
+        if(totalMarketLoad != dataLimit){
+
             push();
             
             // Loading text and percentage text
@@ -279,7 +281,7 @@ function MarketData(){
             
             // Percentage text
             textSize(20);
-            var tPercentage = map(totalLoad, 0, dataLimit, 0, 100);
+            var tPercentage = map(totalMarketLoad, 0, dataLimit, 0, 100);
             text(int(tPercentage) + " % complete", width/2,height/2-20);
             
             // Loading bar percentage
@@ -408,6 +410,25 @@ function MarketData(){
     
     // MouseClicked method
     this.mouseClicked = function(){
+        // Display the following information when the page start up and the home button is selected.
+        if(gallery.selectedVisual.id == "Market Data")
+        {
+              var chartHeading = "Cryptocurrency Market Data.";
+              var chartInfo = "We cover the top 100 crypto currency market data, for now. We're planning on increasing that number as we continue with debugging. \
+              <br><br> \
+              The data is updated every 5 minutes. \
+              <br><br> \
+              You can navigate directly to a number based on the rankings by entering that number in the text box at the top. \
+              <br><br> \
+              You also have the functionality to sort the data on the column of your choice by clicking on the column heading at the top of the table. This makes finding the information your looking for really easy and convenient.";
+
+              var htmlP = select('#chartInfo');
+              htmlP.html(chartInfo);
+
+              var htmlH3 = select('#chartInfoHeading');
+              htmlH3.html(chartHeading);
+        }
+        
         // only run this method if mouse is on canvas
         if(mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height){
             
@@ -505,12 +526,15 @@ function MarketDataLine(x, y, w, h, id, name, logo, logoLink, rank, priceUF, pri
         
         // logo
         imageMode(CENTER);
-        if(this.imgLoaded){
+        if(this.imgLoaded == true){
             if(this.mouseHover){
                 fill(this.oriBackCol);
                 ellipse(this.x+10 + this.w*2/30, this.y+this.h/2, this.h*8/10);
             }
             image(this.logo, this.x+10 + this.w*2/30, this.y+this.h/2);
+        }else{
+            fill(100,100,100);
+            ellipse(this.x+10 + this.w*2/30, this.y+this.h/2, this.h*4/10);
         }
         
         // name and symbol/id

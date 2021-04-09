@@ -98,6 +98,7 @@ var mousePosY;
 function Game(){
     
     // Name for the visualisation to appear in the menu bar.
+    // this.name = '<i class="gg-games"></i>Matsuo';
     this.name = '<i class="fas fa-gamepad fa-lg navicons"></i>Matsuo';
 
     // Each visualisation must have a unique ID with no special
@@ -769,7 +770,7 @@ function Game(){
     this.mouseClicked = function(){
         
         // Display the following information when the page start up and the home button is selected.
-        /*if(gallery.selectedVisual.id == "Game")
+        if(gallery.selectedVisual.id == "Game")
         {
               var chartHeading = "Learn about Telos with Matsuo.";
               var chartInfo = "Motsua is a Telos themed game that focuses on the key points that make the Telos blockchain special. \
@@ -783,7 +784,7 @@ function Game(){
 
               var htmlH3 = select('#chartInfoHeading');
               htmlH3.html(chartHeading);
-        }*/
+        }
         
         //The intro page
         if(!startButtonObj.isClicked){

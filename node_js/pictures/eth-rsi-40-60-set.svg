@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>eth-rsi-40-60-set</title>
+    <desc>Created with Sketch.</desc>
+    <g id="eth-rsi-40-60-set" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#001325" cx="20" cy="20" r="20"></circle>
+        <path d="M20,40 C31.045695,40 40,31.045695 40,20 C40,8.954305 31.045695,1.59872116e-13 20,1.59872116e-13 C19.960858,1.59872116e-13 20.0256298,40 20,40 Z" id="Oval-Copy-2" fill="#1AC8E4"></path>
+        <g id="Ethereum" transform="translate(4.381066, 4.781066)" fill-rule="nonzero">
+            <path d="M23.7803049,15.9733733 L15.6189342,29.0514912 L7.50830486,16.0543733 L15.6040052,19.6071476 L23.7803049,15.9733733 Z M8.38930486,15.5853733 L15.6189342,16.6971842 L22.6693049,15.6133733 L15.6071317,18.723143 L8.38930486,15.5853733 Z" id="Combined-Shape" fill="#1AC8E4"></path>
+            <path d="M23.7789342,15.9735406 L15.6189342,29.0514912 L15.6189342,19.6005406 L23.7789342,15.9735406 Z M15.6189342,1.72054063 L23.9389342,15.0535406 L15.6189342,18.7175406 L15.6189342,1.72054063 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+            <path d="M15.6189342,1.72054063 L23.9390009,15.0535406 L15.6071317,18.723143 L7.27100088,15.0995406 L15.6189342,1.72054063 Z" id="Combined-Shape" fill="#1AC8E4"></path>
+            <path d="M15.6189342,1.72054063 L23.9389342,15.0535406 L15.6189342,18.7175406 L15.6189342,1.72054063 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+            <path d="M15.6189342,12.5876282 L23.8852509,15.0766282 L15.6071317,18.723143 L7.27425085,15.1006282 L15.6189342,12.5876282 Z" id="Combined-Shape" fill-opacity="0.500327797" fill="#C0F6FF"></path>
+        </g>
+    </g>
+</svg>

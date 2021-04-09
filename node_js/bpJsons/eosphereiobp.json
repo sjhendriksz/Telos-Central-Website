@@ -71,7 +71,7 @@
       "node_type": "query",
       "api_endpoint": "http://telos.eosphere.io",
       "ssl_endpoint": "https://telos.eosphere.io",
-      "features": ["chain-api","account-query","hyperion-v2"]
+      "features": ["chain-api","account-query","hyperion-v2","history-v1"]
     }
   ]
 }

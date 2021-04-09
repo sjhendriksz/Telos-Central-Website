@@ -53,7 +53,7 @@
         "longitude": -96.783442
       },
       "node_type": "query",
-      "features" : ["chain-api", "account-query"],
+      "features" : ["chain-api","account-query","hyperion-v2","history-v1"],
       "api_endpoint": "http://api.kainosbp.com",
       "ssl_endpoint": "https://api.kainosbp.com"
     }

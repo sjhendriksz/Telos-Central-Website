@@ -38,6 +38,7 @@ function VotingData(){
 
     // Name, ID and loaded variables.
     this.name = '<i class="fas fa-chart-pie fa-lg navicons"></i>BP Votes';
+    // this.name = '<i class="gg-chart"></i> BP Votes';
     this.id = 'BP-Votes';
     this.loaded = false;
     this.isLoaded = false;
@@ -214,7 +215,7 @@ function VotingData(){
         xPos = 0;
         yPos = 0;
         wdt = chartWidth;
-        hgt = 45;
+        hgt = 60;
         // hgt = chartheight/15;
         
         // bpLine(x, y, w, h, rank, logo, name, location, blocksProduced, votes)
@@ -298,8 +299,6 @@ function VotingData(){
         return loadImage(logo_path,
                          function(){
                                     element.imgLoaded = true;
-                                    totalLoad = totalLoad+1;
-                                    if(totalLoad == dataLimit){loadingComplete = true;}
                                    },
                          function(){
                                     console.log("#" + element.rank + "  Error: " + logo_path)

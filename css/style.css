@@ -56,7 +56,7 @@ header{
 }
 
 #leftNavBarGrid{
-    min-width: 200px;
+    min-width: 140px;
     display: table-cell;
     position: relative;
     background: #1C3144;
@@ -77,7 +77,7 @@ ul{
 
 .menu-item {
     height: auto;
-    width: 100%;
+    width: 90%;
     list-style-type: none;
     padding: 10px 8px 10px 5px;
 }
