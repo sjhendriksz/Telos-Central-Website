@@ -110,7 +110,7 @@ function MarketData(){
                     var maxSupp = nomicsDataFile[i].max_supply;
 
                     // (x, y, w, h, id, name, logo, logoLink, rank, price, marketCap, cirSupp, maxSupp, oneDay, thirtyDay, fontCol, backCol, textS)
-                    this.dataPoints.push(new MarketDataLine(0, 80 + (loopCount-countBad)*61, width, 60, id, name, logo, logoLink, loopCount+1-countBad, priceUF, price, marketCapUF, marketCap, cirSuppUF, cirSupp, maxSupp, oneDay, thirtyDay, 50, 250, this.textSiz/2.5));
+                    this.dataPoints.push(new MarketDataLine(0, 80 + (loopCount-countBad)*60, width, 60, id, name, logo, logoLink, loopCount+1-countBad, priceUF, price, marketCapUF, marketCap, cirSuppUF, cirSupp, maxSupp, oneDay, thirtyDay, 50, 238, this.textSiz/2.5));
                 }
                 // add as a bad count point
                 else{
@@ -306,7 +306,7 @@ function MarketData(){
                 
                 select('input').style('display', "block");
                 
-                push()
+                push();
                 fill(250);
                 textFont('Arial');
                 textStyle(NORMAL);
@@ -385,7 +385,7 @@ function MarketData(){
             
             // Change only the position of the data points that'll be displayed
             for(var i = this.startPoint-1; i < this.endPoint; i++){
-                this.dataPoints[i].y = 80 + (loopCount*(this.dataPoints[i].h+1));
+                this.dataPoints[i].y = 80 + (loopCount*(this.dataPoints[i].h));
                 loopCount++;
             }
         }
@@ -399,7 +399,7 @@ function MarketData(){
             
             // Change only the position of the data points that'll be displayed
             for(var i = this.startPoint-1; i < this.endPoint; i++){
-                this.dataPoints[i].y = 80 + (loopCount*(this.dataPoints[i].h+1));
+                this.dataPoints[i].y = 80 + (loopCount*(this.dataPoints[i].h));
                 loopCount++;
             } 
         }
@@ -513,6 +513,7 @@ function MarketDataLine(x, y, w, h, id, name, logo, logoLink, rank, priceUF, pri
         // container
         fill(this.backgroundCol);
         stroke(50);
+        strokeWeight(1);
         rect(this.x, this.y, this.w-1, this.h);
         noStroke();
         
@@ -800,7 +801,6 @@ function ControlPanel(x, y, w, h, backCol, textCol, textS, limit){
         x: 0,
         y: 0,
         h: 0,
-        inputBoxWidth: null,
         startText: "Displaying: ",
         startTextW: null,
         startIn: null,
@@ -818,7 +818,7 @@ function ControlPanel(x, y, w, h, backCol, textCol, textS, limit){
             this.startIn = createInput(0, int);
             this.startTextW = textWidth(this.startText)+5;
             this.startIn.size(boxWidth);
-            this.startIn.position(200 + this.x + this.startTextW, 65 + this.y + this.h*1/8, 'relative');
+            this.startIn.position(140 + this.x + this.startTextW, 65 + this.y + this.h*1/8, 'relative');
             this.startIn.elt.value = 1;
             // Hide the input box untill the page has loaded
             select('input').style('display', "none");
@@ -830,7 +830,8 @@ function ControlPanel(x, y, w, h, backCol, textCol, textS, limit){
             text(this.startText, this.x+15, this.y + this.h/2);
             
             // Current selection
-            text(" to " + (int(this.startIn.elt.value)+this.lineQty-1), this.x + this.startTextW + this.startIn.width, this.y + this.h/2);
+            var tempText = " to " + str(int(this.startIn.elt.value)+this.lineQty-1);
+            text(tempText, this.x + this.startTextW + this.startIn.width, this.y + this.h/2);
         },
     };
     
@@ -845,7 +846,7 @@ function ControlPanel(x, y, w, h, backCol, textCol, textS, limit){
         this.updateBtn = new Button(btnText, this.x+10, this.y+this.h*1/8, btnWidth, this.h*3/4);
         
         // input field for beginning rank
-        //this.inputField.setup(this.updateBtn.x + this.updateBtn.w +10, this.x, this.y, this.h, this.textSiz); // position with button
+        // this.inputField.setup(this.updateBtn.x + this.updateBtn.w +10, this.x, this.y, this.h, this.textSiz); // position with button
         this.inputField.setup(0, this.x, this.y, this.h, this.textSiz); // position without button
     }
     
@@ -866,7 +867,7 @@ function ControlPanel(x, y, w, h, backCol, textCol, textS, limit){
         this.inputField.draw();
         
         // check mouse hover
-        this.updateBtn.hover();
+        //this.updateBtn.hover();
     }
     
     // Hover method
